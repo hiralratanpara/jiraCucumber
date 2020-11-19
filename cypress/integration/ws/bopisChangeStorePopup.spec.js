@@ -1,6 +1,6 @@
 /// <reference types='Cypress'/>
 //import WebStoreHomePage from '../../../pageObjects/webStoreUI/homePage';
-import WsiBopisSelectStorePage from '../../pageObjects/WSPage/bopisChangeStorePopupPage';
+import WsiBopisSelectStorePage from '../../pageObjects/ws/bopisChangeStorePopupPage';
 
 const wsiBopisSelectStorePage = new WsiBopisSelectStorePage();
 //const homePage = new WebStoreHomePage();
