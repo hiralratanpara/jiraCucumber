@@ -6,7 +6,7 @@
     "productPage":{
         "selectedColor": ".multiple-graphical-att > .selectedValue",
         "shipToStoreBtn": "#shipToStore0",
-        "bostsChangeStoreLink": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > div.store-details-container > a.open-store-selector.ship-to-store-selector.openStorePickupSelectorBosts",
+        "bostsChangeStoreLink": "#productSubsetItem1 > div > div > div > div > ul > li > label > div > a.open-store-selector.ship-to-store-selector.openStorePickupSelectorBosts",
         "bopisChangeStoreLink": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.store-pickup > label.receiving-method-label.radio-box-label > div.no-nearby-availability.noNearbyAvailability.storePickupAvailabilityMessage0 > a",
         "notAvailableNearTxt": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > div.no-nearby-availability.noNearbyAvailability.shipToStoreAvailabilityMessage0 > span > span.messagePrefix",
         "shipToStoreToolTip": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > span > img",
@@ -20,8 +20,8 @@
         "zipCityStTxtBox": "#addressText",
         "storeSearchMsg": "#_ev_5 > div > div.store-pickup-selector-container > p.pickup-store-list-label.initialStoreListLabel.search-warning-no-results",
         "selectMilesBox": "#distanceRadius",
-        "searchBtn": "#_ev_5 > div > div.store-pickup-selector-header > form > button"
-        
+        "searchBtn": "#_ev_5 > div > div.store-pickup-selector-header > form > button",
+        "findAStoreTxt": "Find & Pick a Store"
     }
     
 }

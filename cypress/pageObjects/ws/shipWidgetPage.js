@@ -22,7 +22,7 @@ export default class WsiShipPage {
 
         elementActions.clickElement(productPage.shipToStoreBtn);
         elementActions.shortWait();
-        assertions.isTextEqualTo(findAStorePopUp.findAStorePopupTxt, findAStorePopUpData.findAStoreTxt);
+        assertions.isTextEqualTo(findAStorePopUp.findAStorePopupTxt, findAStorePopUp.findAStoreTxt);
         elementActions.clickElement(findAStorePopUp.closeBtn);
         elementActions.shortWait();
     
@@ -36,14 +36,14 @@ export default class WsiShipPage {
     BOSTSChangeStore(){
         elementActions.clickElement(productPage.bostsChangeStoreLink);
         elementActions.shortWait();
-        assertions.isTextEqualTo(findAStorePopUp.findAStorePopupTxt, findAStorePopUpData.findAStoreTxt);
+        assertions.isTextEqualTo(findAStorePopUp.findAStorePopupTxt, findAStorePopUp.findAStoreTxt);
         elementActions.clickElement(findAStorePopUp.closeBtn);
      
     }
     BOPISChangeStore(){
         elementActions.clickElement(productPage.bopisChangeStoreLink);
         elementActions.shortWait();
-        assertions.isTextEqualTo(findAStorePopUp.findAStorePopupTxt, findAStorePopUpData.findAStoreTxt);
+        assertions.isTextEqualTo(findAStorePopUp.findAStorePopupTxt, findAStorePopUp.findAStoreTxt);
         elementActions.clickElement(findAStorePopUp.closeBtn);
     }
 
@@ -76,7 +76,7 @@ export default class WsiShipPage {
 
         if(elementActions.elementContainsText(productPage.notAvailableNearTxt, productPageData.notAvailableText)){
             elementActions.clickElement(productPage.shipToStoreBtn);
-            assertions.isTextEqualTo(findAStorePopUp.findAStorePopupTx, findAStorePopUpData.FindAStoreTxt);
+            assertions.isTextEqualTo(findAStorePopUp.findAStorePopupTx, findAStorePopUp.FindAStoreTxt);
         }else{
             console.log("Text not found");
         }
