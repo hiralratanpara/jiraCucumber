@@ -1,5 +1,7 @@
 /// <reference types='Cypress'/>
 import { data } from "../../fixtures/we/test-data.json";
+import { breadcrumbs } from '../../locators/WE/pip.json';
+
 describe('WE Test Shop Page ', () => {
     Cypress.on('uncaught:exception', (err, runnable) => {
         return false;
@@ -19,4 +21,14 @@ describe('WE Test Shop Page ', () => {
            cy.get('.shop-hero-1').should('be.visible');
        
         });
+        
+        it('should display the breadcrumb', () => {
+           cy.get('#breadcrumbs').should('exist');  
+        })
+
+        it('should display the correct values in the breadcrumb', () => {
+            cy.get(breadcrumbs.firstBreadcrumb).should('have.text', data.breadcrumb.firstBreadcrumbVal);
+            cy.get(breadcrumbs.secondBreadcrumb).should('have.text', data.breadcrumb.secondBreadcrumbVal);
+            cy.get(breadcrumbs.thirdBreadcrumb).should('have.text', data.breadcrumb.thirdBreadcrumbVal);
+         })
     });

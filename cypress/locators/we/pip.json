@@ -1,0 +1,7 @@
+{
+    "breadcrumbs": {
+        "firstBreadcrumb": "#breadcrumbs > :nth-child(1) > a > span",
+        "secondBreadcrumb": "#breadcrumbs > :nth-child(2) > a > span",
+        "thirdBreadcrumb": ":nth-child(3) > h1" 
+    }
+}
