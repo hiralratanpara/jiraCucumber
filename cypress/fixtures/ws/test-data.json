@@ -1,0 +1,29 @@
+{
+"data":{
+    "loginPageData": {
+        "url": "https://westelm.com/"
+    },
+
+    "homePageData": {
+        "skuNo": "4212770"
+       
+    },
+    "productPageData":{
+        "productName": "Personalized McKenna Leather Jewelry Armoire, White",
+        "productColor": "White",
+        "toolTipHeader": "Reduced Shipping Ship To Store",
+        "toolTipTxt": "We'll ship the item to your selected store in the time frame shown for $39.99 (or $79.99 if order total exceeds $1,000). You'll be notified when your items have arrived and have 7 days to pick them up. Does not includes any White Glove service, lifting/moving, or assembly of items. Please refer to the item dimensions to ensure this item will fit in your vehicle.",
+        "notAvailableText": "Not available near "
+
+    },
+    "findAStorePopUpData":{
+       "findAStoreTxt": "Find & Pick a Store",
+       "cityName": "nyc",
+       "cityName1": "Sacramento, CA, USA",
+       "pressEnter": "{enter}",
+       "storeSearchMsgTxt": "This product is not available in any stores within 25 miles."
+        
+    }
+    
+}
+}
