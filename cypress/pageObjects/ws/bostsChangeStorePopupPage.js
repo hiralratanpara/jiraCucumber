@@ -1,9 +1,9 @@
 /// <reference types='Cypress'/>
 
 import ElementActions from '../../utils/elementActions';
-import { searchPage, findAStorePopUp, productPage } from '../../locators/WS/homePage.json';
+import { searchPage, findAStorePopUp, productPage } from '../../locators/ws/pip.json';
 import Assertions from '../../utils/assertions.js';
-import { loginPageData, homePageData, productPageData, findAStorePopUpData } from "../../fixtures/testData/WS/wsTD.json"
+import { loginPageData, homePageData, productPageData, findAStorePopUpData } from "../../fixtures/ws/test-data.json"
 
 const elementActions = new ElementActions();
 const assertions = new Assertions();

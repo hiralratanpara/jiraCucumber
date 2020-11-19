@@ -1,7 +1,7 @@
 /// <reference types='Cypress'/>
-import WsiShipPage from '../../pageObjects/WSPage/shipWidgetPage';
+import WsiShipPage from '../../pageObjects/ws/shipWidgetPage';
 import { data } from "../../fixtures/we/test-data.json";
-import { searchPage, findAStorePopUp, productPage } from '../../locators/WS/pip.json';
+import { searchPage, findAStorePopUp, productPage } from '../../locators/ws/pip.json';
 
 const wsiShipPage = new WsiShipPage();
 //const homePage = new WebStoreHomePage();
