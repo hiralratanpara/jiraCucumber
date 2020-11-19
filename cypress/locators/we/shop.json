@@ -1,0 +1,7 @@
+{
+    "category":{
+        "superCat":".category-6 > .c-nav-category_link > span",
+        "leftMenu":".left-nav > :nth-child(2) > :nth-child(3) > a",
+        "visualNav":".shop-hero-1"
+    }
+}

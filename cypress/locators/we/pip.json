@@ -1,7 +1,37 @@
 {
-	"breadcrumbs": {
-		"firstBreadcrumb": "#breadcrumbs > :nth-child(1) > a > span",
-		"secondBreadcrumb": "#breadcrumbs > :nth-child(2) > a > span",
-		"thirdBreadcrumb": ":nth-child(3) > h1"
-	}
+
+    "searchPage": {
+        "searchBox":"form[name=nav-search-form]"
+    },
+    "productPage":{
+        "selectedColor": ".multiple-graphical-att > .selectedValue",
+        "shipToStoreBtn": "#shipToStore0",
+        "bostsChangeStoreLink": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > div.store-details-container > a.open-store-selector.ship-to-store-selector.openStorePickupSelectorBosts",
+        "bopisChangeStoreLink": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.store-pickup > label.receiving-method-label.radio-box-label > div.no-nearby-availability.noNearbyAvailability.storePickupAvailabilityMessage0 > a",
+        "notAvailableNearTxt": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > div.no-nearby-availability.noNearbyAvailability.shipToStoreAvailabilityMessage0 > span > span.messagePrefix",
+        "shipToStoreToolTip": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > span > img",
+        "toolTipPopup": ".shipItemTooltip",
+        "aoddText": "div.order-pickup-aodd > p > span.orderPickupAoddDeliveryWindow"
+
+    },
+    "findAStorePopUp":{
+        "closeBtn": "#_ev_5 > div > div.good-panel-close.good-panel-close-x.panelClose",
+        "findAStorePopupTxt": "#_ev_5 > div > h3",
+        "zipCityStTxtBox": "#addressText",
+        "storeSearchMsg": "#_ev_5 > div > div.store-pickup-selector-container > p.pickup-store-list-label.initialStoreListLabel.search-warning-no-results",
+        "selectMilesBox": "#distanceRadius",
+        "searchBtn": "#_ev_5 > div > div.store-pickup-selector-header > form > button"
+        
+    },
+    "pipPage":{
+        "productLabel":".pip-summary",
+        "swatchLabel":"#productSubsetItem1 > div > div > div.subset-attributes.subsetAttributes > h4.multiple-graphical-att > span.selectedValue"
+    },
+    
+    "breadcrumbs": {
+        "firstBreadcrumb": "#breadcrumbs > :nth-child(1) > a > span",
+        "secondBreadcrumb": "#breadcrumbs > :nth-child(2) > a > span",
+        "thirdBreadcrumb": ":nth-child(3) > h1" 
+    }
+
 }
