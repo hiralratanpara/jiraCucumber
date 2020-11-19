@@ -28,6 +28,11 @@
        "pressEnter": "{enter}",
        "storeSearchMsgTxt": "This product is not available in any stores within 25 miles."
         
+    },
+    "breadcrumb": {
+        "firstBreadcrumbVal": "Home",
+        "secondBreadcrumbVal": "Furniture",
+        "thirdBreadcrumbVal": "Sofas + Loveseats"        
     }
     
 }
