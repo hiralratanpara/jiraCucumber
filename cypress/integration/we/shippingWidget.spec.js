@@ -35,14 +35,14 @@ describe('wsi ship to store ', () => {
 
     it('Verify the BOSTS overlay opens on change store click', () => {
         cy.get(productPage.bostsChangeStoreLink).click();
-        cy.get(findAStorePopUp.findAStorePopupTxt).should('have.text', findAStorePopUpData.findAStoreTxt);
+        cy.get(findAStorePopUp.findAStorePopupTxt).should('have.text', data.findAStorePopUpData.findAStoreTxt);
         cy.get(findAStorePopUp.closeBtn).click();
     });
 
     it('Verify the BOPIS overlay opens on change store click', () => {
         wsiShipPage.BOPISChangeStore();
         cy.get(productPage.bopisChangeStoreLink).click();
-        cy.get(findAStorePopUp.findAStorePopupTxt).should('have.text', findAStorePopUpData.findAStoreTxt);
+        cy.get(findAStorePopUp.findAStorePopupTxt).should('have.text', data.findAStorePopUpData.findAStoreTxt);
         cy.get(findAStorePopUp.closeBtn).click();
     });
 
@@ -56,9 +56,9 @@ describe('wsi ship to store ', () => {
 */
     it('Verify that BOSTS popup should open when "item Not available near by" and STS option is selected', () => {
        
-        if(cy.get(productPage.notAvailableNearTxt).contains(productPageData.notAvailableText).should('be.visible')){
+        if(cy.get(productPage.notAvailableNearTxt).contains(data.productPageData.notAvailableText).should('be.visible')){
             cy.get(productPage.shipToStoreBtn).click();
-            cy.get(findAStorePopUp.findAStorePopupTx).should('have.text', findAStorePopUpData.FindAStoreTxt);
+            cy.get(findAStorePopUp.findAStorePopupTx).should('have.text', data.findAStorePopUpData.FindAStoreTxt);
         }else{
             console.log("Text not found");
         }
