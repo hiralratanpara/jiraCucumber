@@ -9,7 +9,9 @@
     },
 
     "homePageData": {
-        "skuNo": "3377284"
+        "skuNo": "3377284",
+        "skuName": "Hayes Sconce, Dark Bronze, Individual",
+        "defaultSwatch":"Dark Bronze"
        
     },
     "productPageData":{
