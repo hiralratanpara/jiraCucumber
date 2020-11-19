@@ -5,6 +5,7 @@ import {category} from '../../locators/we/shop.json'
 import { breadcrumbs } from '../../locators/WE/pip.json';
 
 describe('WE Test Shop Page ', () => {
+
     Cypress.on('uncaught:exception', (err, runnable) => {
         return false;
       });
@@ -56,4 +57,5 @@ describe('WE Test Shop Page ', () => {
             cy.get(breadcrumbs.thirdBreadcrumb).should('have.text', data.breadcrumb.thirdBreadcrumbVal);
          })
     });
+
 });
