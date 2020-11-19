@@ -55,7 +55,7 @@ describe('wsi ship to store ', () => {
     });
 */
     it('Verify that BOSTS popup should open when "item Not available near by" and STS option is selected', () => {
-        ;
+       
         if(cy.get(productPage.notAvailableNearTxt).contains(productPageData.notAvailableText).should('be.visible')){
             cy.get(productPage.shipToStoreBtn).click();
             cy.get(findAStorePopUp.findAStorePopupTx).should('have.text', findAStorePopUpData.FindAStoreTxt);
