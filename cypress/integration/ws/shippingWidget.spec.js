@@ -1,5 +1,5 @@
 /// <reference types='Cypress'/>
-import WsiShipPage from '../../pageObjects/WSPage/shipWidgetPage';
+import WsiShipPage from '../../pageObjects/ws/shipWidgetPage';
 
 const wsiShipPage = new WsiShipPage();
 //const homePage = new WebStoreHomePage();
