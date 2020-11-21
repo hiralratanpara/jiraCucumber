@@ -62,13 +62,32 @@ describe("wsi ship to store ", () => {
     cy.get(findAStorePopUp.closeBtn).click();
   });
 
-  /*  it('Verify the header of the text when mouseover over tooltip', () => {
-        wsiShipPage.shipToStoreToolTipHeader();
-    });
+  it("Verify the BOSTS overlay opens on change store click", () => {
+    cy.get(productPage.bostsChangeStoreLink).click();
+    cy.get(findAStorePopUp.findAStorePopupTxt).should(
+      "have.text",
+      data.findAStorePopUpData.findAStoreTxt
+    );
+    cy.get(findAStorePopUp.closeBtn).click();
+  });
 
-    it('Verify the text when mouseover over tooltip', () => {
-        wsiShipPage.shipToStoreToolTipTxt();
-    });
+  it("Verify the BOPIS overlay opens on change store click", () => {
+    wsiShipPage.BOPISChangeStore();
+    cy.get(productPage.bopisChangeStoreLink).click();
+    cy.get(findAStorePopUp.findAStorePopupTxt).should(
+      "have.text",
+      data.findAStorePopUpData.findAStoreTxt
+    );
+    cy.get(findAStorePopUp.closeBtn).click();
+  });
+
+  /*  it('Verify the header of the text when mouseover over tooltip', () => {
+				wsiShipPage.shipToStoreToolTipHeader();
+		});
+
+		it('Verify the text when mouseover over tooltip', () => {
+				wsiShipPage.shipToStoreToolTipTxt();
+		});
 */
   it('Verify that BOSTS popup should open when "item Not available near by" and STS option is selected', () => {
     if (
