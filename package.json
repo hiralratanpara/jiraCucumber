@@ -1,4 +1,11 @@
 {
+	"scripts": {
+		"cypress": "cypress open",
+		"cypress:cli": "cypress run",
+		"cypress:chrome": "cypress run --browser chrome",
+		"cypress:firefox": "cypress run --browser firefox",
+		"cypress:edge": "cypress run --browser edge"
+  },
     "devDependencies": {
         "cypress": "^5.6.0"
     }
