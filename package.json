@@ -1,12 +1,14 @@
 {
-	"scripts": {
-		"cypress": "cypress open",
-		"cypress:cli": "cypress run",
-		"cypress:chrome": "cypress run --browser chrome",
-		"cypress:firefox": "cypress run --browser firefox",
-		"cypress:edge": "cypress run --browser edge"
+  "scripts": {
+    "cypress": "cypress open",
+    "cypress:cli": "cypress run",
+    "cypress:chrome": "npx cypress open --browser chrome",
+    "cypress:firefox": "npx cypress run --browser firefox",
+    "cypress:edge": "npx cypress run --browser edge",
+    "cypress:run:mobile": "cypress run --config viewportWidth=375,viewportHeight=667",
+    "cypress:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=667"
   },
-    "devDependencies": {
-        "cypress": "^5.6.0"
-    }
+  "devDependencies": {
+    "cypress": "^5.6.0"
+  }
 }

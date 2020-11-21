@@ -1,10 +1,10 @@
 /// <reference types='Cypress'/>
-import { data } from "../../fixtures/we/test-data.json";
+import { data } from "../fixtures/we/test-data.json";
 import {
   searchPage,
   findAStorePopUp,
   productPage,
-} from "../../locators/we/pip.json";
+} from "../locators/we/pip.json";
 
 describe("wsi ship to store ", () => {
   Cypress.on("uncaught:exception", (err, runnable) => {
