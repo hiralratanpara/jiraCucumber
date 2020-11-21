@@ -6,7 +6,7 @@
         "selectedColor": ".multiple-graphical-att > .selectedValue",
         "shipToStoreBtn": "#shipToStore0",
         "bostsChangeStoreLink": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > div.store-details-container > a.open-store-selector.ship-to-store-selector.openStorePickupSelectorBosts",
-        "bopisChangeStoreLink": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.store-pickup > label.receiving-method-label.radio-box-label > div.no-nearby-availability.noNearbyAvailability.storePickupAvailabilityMessage0 > a",
+        "bopisChangeStoreLink": ".storePickup > .receiving-method-label > .no-nearby-availability > .receiving-method-detail > .messagePrefix",
         "notAvailableNearTxt": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > div.no-nearby-availability.noNearbyAvailability.shipToStoreAvailabilityMessage0 > span > span.messagePrefix",
         "shipToStoreToolTip": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > span > img",
         "toolTipPopup": ".shipItemTooltip",

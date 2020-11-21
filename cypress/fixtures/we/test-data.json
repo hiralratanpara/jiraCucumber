@@ -35,7 +35,11 @@
         "firstBreadcrumbVal": "Home",
         "secondBreadcrumbVal": "Furniture",
         "thirdBreadcrumbVal": "Sofas + Loveseats"        
+    },
+    "bopis":{
+        "skuNo": "1796378"
     }
+
     
 }
 }
