@@ -1,20 +1,10 @@
 {
   "scripts": {
-    "cypress": "cypress open",
-    "cypress:cli": "cypress run",
-    "cypress:chrome": "npx cypress open --browser chrome",
-    "cypress:firefox": "npx cypress run --browser firefox",
-    "cypress:edge": "npx cypress run --browser edge",
-    "cypress:run:we:prod:mobile": "cypress run open --env brand=we --config viewportWidth=375,viewportHeight=667",
-    "cypress:open:we:prod:mobile": "npx cypress open --env brand=we --config viewportWidth=375,viewportHeight=667",
-    "cypress:open:we:regression:chrome": "npx cypress open --env brand=we --config-file cypress.regression.json --browser chrome",
-    "cypress:open:we:regression:firefox": "npx cypress open --env brand=we --config-file cypress.regression.json --browser firefox",
-    "cypress:open:we:prod:chrome": "npx cypress open --env brand=we --browser chrome",
-    "cypress:open:we:prod:firefox": "npx cypress open --env brand=we --browser firefox",
-    "cypress:open:ws:regression:chrome": "npx cypress open --env brand=ws --config-file cypress.regression.json --browser chrome",
-    "cypress:open:ws:regression:firefox": "npx cypress open --env brand=ws --config-file cypress.regression.json --browser firefox",
-    "cypress:open:ws:prod:chrome": "npx cypress open --env brand=ws --browser chrome",
-    "cypress:open:ws:prod:firefox": "npx cypress open --env brand=ws --browser firefox"
+    "cypress": "cypress open --env brand=we",
+    "cypress:cli": "cypress run --env brand=we",
+    "cypress:chrome": "cypress run --browser chrome",
+    "cypress:firefox": "cypress run --browser firefox",
+    "cypress:edge": "cypress run --browser edge"
   },
   "devDependencies": {
     "cypress": "^5.6.0"
