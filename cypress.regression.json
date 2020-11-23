@@ -1,0 +1,7 @@
+{
+  "env": {
+    "we": "https://regression.westelm.com",
+    "ws": "https://regression.william-sonoma.com",
+    "pb": "https://regression.potterybarn.com"
+  }
+}

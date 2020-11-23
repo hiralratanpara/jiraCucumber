@@ -1,8 +1,8 @@
 /// <reference types='Cypress'/>
-import { data } from "../../fixtures/we/test-data.json";
-import { searchPage, productPage, pipPage } from "../../locators/we/pip.json";
-import { category } from "../../locators/we/shop.json";
-import { breadcrumbs } from "../../locators/WE/pip.json";
+import { data } from "../fixtures/we/test-data.json";
+import { searchPage, productPage, pipPage } from "../locators/we/pip.json";
+import { category } from "../locators/we/shop.json";
+import { breadcrumbs } from "../locators/we/pip.json";
 
 describe("WE Test Shop Page ", () => {
   Cypress.on("uncaught:exception", (err, runnable) => {
@@ -10,7 +10,9 @@ describe("WE Test Shop Page ", () => {
   });
 
   before(() => {
-    cy.visit(data.brandURL);
+    console.log(Cypress.env(Cypress.env("brand")));
+    cy.visit(Cypress.env("brand"));
+
     cy.wait(5000);
     cy.get("body")
       .find(".stickyOverlayCloseButton")

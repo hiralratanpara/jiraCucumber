@@ -1,1 +1,7 @@
-{}
+{
+  "env": {
+    "we": "https://westelm.com",
+    "ws": "https://william-sonoma.com",
+    "pb": "https://potterybarn.com"
+  }
+}

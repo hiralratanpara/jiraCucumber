@@ -6,7 +6,15 @@
     "cypress:firefox": "npx cypress run --browser firefox",
     "cypress:edge": "npx cypress run --browser edge",
     "cypress:run:mobile": "cypress run --config viewportWidth=375,viewportHeight=667",
-    "cypress:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=667"
+    "cypress:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=667",
+    "cypress:open:we:regression:chrome": "npx cypress open --env brand=we --config-file cypress.regression.json --browser chrome",
+    "cypress:open:we:regression:firefox": "npx cypress open --env brand=we --config-file cypress.regression.json --browser firefox",
+    "cypress:open:we:prod:chrome": "npx cypress open --env brand=we --browser chrome",
+    "cypress:open:we:prod:firefox": "npx cypress open --env brand=we --browser firefox",
+    "cypress:open:ws:regression:chrome": "npx cypress open --env brand=ws --config-file cypress.regression.json --browser chrome",
+    "cypress:open:ws:regression:firefox": "npx cypress open --env brand=ws --config-file cypress.regression.json --browser firefox",
+    "cypress:open:ws:prod:chrome": "npx cypress open --env brand=ws --browser chrome",
+    "cypress:open:ws:prod:firefox": "npx cypress open --env brand=ws --browser firefox"
   },
   "devDependencies": {
     "cypress": "^5.6.0"
