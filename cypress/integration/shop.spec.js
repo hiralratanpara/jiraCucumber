@@ -11,7 +11,16 @@ describe("WE Test Shop Page ", () => {
 
   before(() => {
     console.log(Cypress.env(Cypress.env("brand")));
-    cy.visit(Cypress.env("brand"));
+    if (Cypress.env("region") != "prod") {
+      cy.visit(Cypress.env("brand"), {
+        auth: {
+          username: Cypress.env("username"),
+          pwd: Cypress.env("password"),
+        },
+      });
+    } else {
+      cy.visit(Cypress.env("brand"));
+    }
 
     cy.wait(5000);
     cy.get("body")
