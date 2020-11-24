@@ -2,6 +2,17 @@
     "category":{
         "superCat":".category-6 > .c-nav-category_link > span",
         "leftMenu":".left-nav > :nth-child(2) > :nth-child(3) > a",
-        "visualNav":".shop-hero-1"
+        "visualNav":".shop-hero-1",
+        "shopGrid": "[data-component='Shop-SubCategoryTemplate']",
+        "shop-body": "[shop-main-container]",
+        "subcat-page": "[Shop-pages-SubCat]",
+        "breadcrumbs": "[Shop-Breadcrumbs]",
+        "subcat-aside": "[sub-cat-aside]",
+        "Shop-ShopFacets": "[shop_facets]",
+        "Filter By:": "[#subcat-page > div.sub-cat-container > aside > div.side-nav.sticky > div.shop_facets > div.accordion-container > h3]",
+        "my location": "[passive-filtering-container]",
+        "Availability": "[#subcat-page > div.sub-cat-container > aside > div.side-nav.sticky > div.shop_facets > div.accordion-container > div.facet-selections]",
+        "Material": "[#subcat-page > div.sub-cat-container > aside > div.side-nav.sticky > div.shop_facets > div.accordion-container > section:nth-child(5) > div.accordion-title]",
+        "": "[]",
     }
 }

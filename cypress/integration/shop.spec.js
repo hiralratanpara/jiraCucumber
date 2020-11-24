@@ -66,6 +66,10 @@ describe("WE Test Shop Page ", () => {
     cy.wait(5000);
     cy.get(category.visualNav).should("be.visible");
 
+    it("should display the shop grid", () => {
+     cy.get(category.shopGrid).should("be.visible");
+    });
+
     it("should display the breadcrumb", () => {
       cy.get("#breadcrumbs").should("exist");
     });
@@ -84,5 +88,12 @@ describe("WE Test Shop Page ", () => {
         data.breadcrumb.thirdBreadcrumbVal
       );
     });
+    it("should display products related to material velvet", () => {
+      cy.get("#material\|multi-select\|Material-Velvet").click();
+    );
   });
+    it("should display 'filter by' in left menu", () => {
+    cy.get(category.visualNav).should("be.visible");
+    }
+
 });
