@@ -16,6 +16,22 @@
  * @type {Cypress.PluginConfig}
  */
 module.exports = (on, config) => {
-	// `on` is used to hook into various events Cypress emits
-	// `config` is the resolved Cypress config
-}
+  // `on` is used to hook into various events Cypress emits
+  // `config` is the resolved Cypress config
+  let region = config.env.region;
+  if (!region) {
+    region = "prod";
+  }
+
+  let brand = config.env.brand;
+  if (!brand) {
+    brand = "we";
+  }
+
+  if (config.env.viewportWidth && config.env.viewportHeight) {
+    config.env.device = "mobile";
+  }
+  config.env.brand = brand;
+  config.env.region = region;
+  return config;
+};
