@@ -20,7 +20,7 @@ import './commands'
 // require('./commands')
 
 before(() => {
-	const region = Cypress.env("region");
+	const region = Cypress.env("region" || "prod");
 	const urls = Cypress.env(region);
 	const brand = Cypress.env("brand" || "we");
 	const url = urls[brand];
