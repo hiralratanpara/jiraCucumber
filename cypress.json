@@ -1,7 +1,19 @@
 {
   "env": {
-    "we": "https://westelm.com",
-    "ws": "https://william-sonoma.com",
-    "pb": "https://potterybarn.com"
+    "prod": {
+      "we": "https://westelm.com",
+      "ws": "https://william-sonoma.com",
+      "pb": "https://potterybarn.com"
+    },
+    "regression": {
+      "we": "https://regression.westelm.com",
+      "ws": "https://regression.william-sonoma.com",
+      "pb": "https://regression.potterybarn.com"
+    },
+    "aktest": {
+      "we": "https://aktest-www.westelm.com",
+      "ws": "https://aktest-www.william-sonoma.com",
+      "pb": "https://aktest-www.potterybarn.com"
+    }
   }
 }

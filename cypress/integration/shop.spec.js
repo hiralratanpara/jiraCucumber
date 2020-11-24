@@ -10,16 +10,20 @@ describe("WE Test Shop Page ", () => {
   });
 
   before(() => {
-    console.log(Cypress.env(Cypress.env("brand")));
-    if (Cypress.env("region") != "prod") {
-      cy.visit(Cypress.env("brand"), {
+    var region = Cypress.env("region");
+    var urls = Cypress.env(region);
+    var brand = Cypress.env("brand");
+    var url = urls[brand];
+
+    if (region.toUpperCase() === "PROD") {
+      cy.visit(url);
+    } else {
+      cy.visit(url, {
         auth: {
           username: Cypress.env("username"),
-          pwd: Cypress.env("password"),
+          password: Cypress.env("password"),
         },
       });
-    } else {
-      cy.visit(Cypress.env("brand"));
     }
 
     cy.wait(5000);
