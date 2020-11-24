@@ -10,6 +10,7 @@ describe("WE Test Shop Page ", () => {
   });
 
   before(() => {
+<<<<<<< Updated upstream
     var region = Cypress.env("region");
     var urls = Cypress.env(region);
     var brand = Cypress.env("brand");
@@ -25,6 +26,10 @@ describe("WE Test Shop Page ", () => {
         },
       });
     }
+=======
+    console.log(Cypress.env(Cypress.env("brand")));
+    cy.visit(Cypress.env("brand" || "ws"));
+>>>>>>> Stashed changes
 
     cy.wait(5000);
     cy.get("body")
