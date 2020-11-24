@@ -9,38 +9,6 @@ describe("WE Test Shop Page ", () => {
     return false;
   });
 
-  before(() => {
-<<<<<<< Updated upstream
-    var region = Cypress.env("region");
-    var urls = Cypress.env(region);
-    var brand = Cypress.env("brand");
-    var url = urls[brand];
-
-    if (region.toUpperCase() === "PROD") {
-      cy.visit(url);
-    } else {
-      cy.visit(url, {
-        auth: {
-          username: Cypress.env("username"),
-          password: Cypress.env("password"),
-        },
-      });
-    }
-=======
-    console.log(Cypress.env(Cypress.env("brand")));
-    cy.visit(Cypress.env("brand" || "ws"));
->>>>>>> Stashed changes
-
-    cy.wait(5000);
-    cy.get("body")
-      .find(".stickyOverlayCloseButton")
-      .its("length")
-      .then((res) => {
-        if (res > 0) {
-          cy.get(".stickyOverlayCloseButton").click();
-        }
-      });
-  });
   it("Should search SKU", () => {
     cy.get(searchPage.searchBox).type(data.homePageData.skuNo).submit();
   });

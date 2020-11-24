@@ -18,3 +18,31 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+before(() => {
+	const region = Cypress.env("region");
+	const urls = Cypress.env(region);
+	const brand = Cypress.env("brand" || "we");
+	const url = urls[brand];
+
+	if (region.toUpperCase() === "PROD") {
+		cy.visit(url);
+	} else {
+		cy.visit(url, {
+			auth: {
+				username: Cypress.env("username"),
+				password: Cypress.env("password"),
+			},
+		});
+	}
+
+	cy.wait(5000);
+	cy.get("body")
+		.find(".stickyOverlayCloseButton")
+		.its("length")
+		.then((res) => {
+			if (res > 0) {
+				cy.get(".stickyOverlayCloseButton").click();
+			}
+		});
+});
