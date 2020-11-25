@@ -69,7 +69,7 @@ describe("WE Test Shop Page ", () => {
       });
     cy.wait(5000);
     cy.get(category.visualNav).should("be.visible");
-
+    });
     it("should display the shop grid", () => {
      cy.get(category.shopGrid).should("be.visible");
     });
@@ -92,12 +92,47 @@ describe("WE Test Shop Page ", () => {
         data.breadcrumb.thirdBreadcrumbVal
       );
     });
-    it("should display products related to material velvet", () => {
-      cy.get("#material\|multi-select\|Material-Velvet").click();
-    );
-  });
-    it("should display 'filter by' in left menu", () => {
-    cy.get(category.visualNav).should("be.visible");
-    }
 
+    it("should display the correct values in the sub-cat-aside", () => {
+      cy.get(category.firstSubcataside).should(
+        "have.text",
+        data.subCatAside.firstSubcataside
+      );
+      cy.get(category.secondSubcataside).should(
+        "have.text",
+        data.subCatAside.secondSubcataside
+      );
+      cy.get(category.thirdSubcataside).should(
+        "have.text",
+        data.subCatAside.thirdSubcataside
+      );
+      cy.get(category.fourthSubcataside).should(
+        "have.text",
+        data.subCatAside.fourthSubcataside
+      );
+      cy.get(category.fifthaSubcataside).should(
+        "have.text",
+        data.subCatAside.fifthaSubcataside
+      );
+      cy.get(category.sixsthSubcataside).should(
+        "have.text",
+        data.subCatAside.sixsthSubcataside
+      );
+     cy.get(category.seventhSubcataside).should(
+       "have.text",
+       data.subCatAside.seventhSubcataside
+     );
+     cy.get(category.eightSubcataside).should(
+       "have.text",
+       data.subCatAside.eightSubcataside
+     );
+     cy.get(category.ninthSubcataside).should(
+       "have.text",
+       data.subCatAside.ninthSubcataside
+     );
+    });
+
+   it("should display 'filter by' in left menu", () => {
+    cy.get(category.visualNav).should("be.visible");
+   });
 });

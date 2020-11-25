@@ -37,20 +37,19 @@
         "thirdBreadcrumbVal": "Sofas + Loveseats"        
     },
     "bopis":{
-        "skuNo": "1796378",
+        "skuNo": "1796378"
 
    },
-   "sub-cat-aside": {
-       "firstsub-cat-aside": "Filter By",
-       "secondsub-cat-aside": "AVAILABILITY",
-       "thirdsub-cat-aside": "MATERIAL",
-       "fourthsub-cat-aside": "LENGTH",
-       "fifthasub-cat-aside": "COLOR",
-       "sixsthsub-cat-aside": "SEATING CAPACITY",
-       "seventhsub-cat-aside": "SEAT FIRMNESS",
-       "eightsub-cat-aside": "FEATURES",
-       "ninthsub-cat-aside": "PRICE",
-
+   "subCatAside": {
+       "firstSubcataside": "Filter By:",
+       "secondSubcataside": "\n            Availability\n          ",
+       "thirdSubcataside": "Material ",
+       "fourthSubcataside": "Length ",
+       "fifthaSubcataside": "Color",
+       "sixsthSubcataside": "Seating Capacity ",
+       "seventhSubcataside": "Seat Firmness ",
+       "eightSubcataside": "Features ",
+       "ninthSubcataside": "Price "
    }
     
 }

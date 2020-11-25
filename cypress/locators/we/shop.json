@@ -9,10 +9,15 @@
         "breadcrumbs": "[Shop-Breadcrumbs]",
         "subcat-aside": "[sub-cat-aside]",
         "Shop-ShopFacets": "[shop_facets]",
-        "Filter By:": "[#subcat-page > div.sub-cat-container > aside > div.side-nav.sticky > div.shop_facets > div.accordion-container > h3]",
         "my location": "[passive-filtering-container]",
-        "Availability": "[#subcat-page > div.sub-cat-container > aside > div.side-nav.sticky > div.shop_facets > div.accordion-container > div.facet-selections]",
-        "Material": "[#subcat-page > div.sub-cat-container > aside > div.side-nav.sticky > div.shop_facets > div.accordion-container > section:nth-child(5) > div.accordion-title]",
-        "": "[]",
+        "firstSubcataside": "#subcat-page .side-nav.sticky .shop_facets .accordion-container h3",
+        "secondSubcataside": "#subcat-page .no-bopis-availability .accordion-title",
+        "thirdSubcataside": "#subcat-page .accordion-container section:nth-child(5) .accordion-title",
+        "fourthSubcataside": "#subcat-page .accordion-container section:nth-child(6) .accordion-title",
+        "fifthaSubcataside": "#subcat-page > div.sub-cat-container > aside > div.side-nav.sticky > div.shop_facets > div.accordion-container > section:nth-child(7) > div.accordion-title > h4",
+        "sixsthSubcataside": "#subcat-page .accordion-container section:nth-child(8) .accordion-title",
+        "seventhSubcataside": "#subcat-page .accordion-container section:nth-child(9) .accordion-title",
+        "eightSubcataside": "#subcat-page .accordion-container section:nth-child(10) .accordion-title",
+        "ninthSubcataside": "#subcat-page .accordion-container section:nth-child(11) .accordion-title"
     }
 }
