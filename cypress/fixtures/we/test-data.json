@@ -9,7 +9,7 @@
     },
 
     "homePageData": {
-      "skuNo": "3377284",
+      "skuNo": "3668738",
       "skuName": "Hayes Sconce, Dark Bronze, Individual",
       "defaultSwatch": "Dark Bronze"
     },
@@ -26,7 +26,8 @@
       "cityName": "nyc",
       "cityName1": "Sacramento, CA, USA",
       "pressEnter": "{enter}",
-      "storeSearchMsgTxt": "This product is not available in any stores within 25 miles."
+      "storeSearchMsgTxt": "This product is not available in any stores within 25 miles.",
+      "storeSearch200MilesMsgTxt": "This product is not available in any stores within 200 miles."
     },
     "breadcrumb": {
       "firstBreadcrumbVal": "Home",
