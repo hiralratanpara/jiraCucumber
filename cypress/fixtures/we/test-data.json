@@ -40,6 +40,18 @@
       "myStoreTxt": " My Store ",
       "zip": "03456",
       "eastonTownCenterTxtHomePage": " Wayside Commons "
+    },
+
+    "subCatAside": {
+      "firstSubcataside": "Filter By:",
+      "secondSubcataside": "\n            Availability\n          ",
+      "thirdSubcataside": "Material ",
+      "fourthSubcataside": "Length ",
+      "fifthaSubcataside": "Color",
+      "sixsthSubcataside": "Seating Capacity ",
+      "seventhSubcataside": "Seat Firmness ",
+      "eightSubcataside": "Features ",
+      "ninthSubcataside": "Price "
     }
   }
 }
