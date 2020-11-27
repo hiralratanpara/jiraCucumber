@@ -38,8 +38,19 @@
     },
     "bopis":{
         "skuNo": "1796378"
-    }
 
+   },
+   "subCatAside": {
+       "firstSubcataside": "Filter By:",
+       "secondSubcataside": "\n            Availability\n          ",
+       "thirdSubcataside": "Material ",
+       "fourthSubcataside": "Length ",
+       "fifthaSubcataside": "Color",
+       "sixsthSubcataside": "Seating Capacity ",
+       "seventhSubcataside": "Seat Firmness ",
+       "eightSubcataside": "Features ",
+       "ninthSubcataside": "Price "
+   }
     
 }
 
