@@ -1,37 +1,49 @@
 {
+  "searchPage": {
+    "searchBox": "form[name=nav-search-form]",
+    "myStoreTxt": "label[for*='my-store']",
+    "selectedStoreLink": "span[class*='selected-store']"
+  },
+  "productPage": {
+    "selectedColor": ".multiple-graphical-att > .selectedValue",
+    "shipToStoreBtn": "#shipToStore0",
+    "bopis": "#pickUpInStore0",
+    "bostsChangeStoreLink": "div:nth-child(5) div.store-details-container a[name*='bosts-panel']",
+    "bopisChangeStoreLink": "label[for*='pickUpInStore0'] div a[name*='bopis-panel']",
+    "selectBopis": "#pickUpInStore0",
+    "bopisNotAvailableNearTxt": "label[for*='shipToStore0'] div span[class*='messagePrefix']",
+    "notAvailableNearTxt": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > div.no-nearby-availability.noNearbyAvailability.shipToStoreAvailabilityMessage0 > span > span.messagePrefix",
+    "shipToStoreToolTip": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > span > img",
+    "toolTipPopup": ".shipItemTooltip",
+    "aoddText": "div.order-pickup-aodd > p > span.orderPickupAoddDeliveryWindow",
+    "bopisStoreSelectedName": "label[for*='pickUpInStore0'] dl dd span[class*='sts-location-name']",
+    "seeStoreDetailsLinkTxt": "label[for*='pickUpInStore0'] dl a[class*='show-detail']",
+    "hideStoreDetails": "label[for*='pickUpInStore0'] dl a[class*='hide-detail ship-to-store-selector']"
+  },
+  "findAStorePopUp": {
+    "closeBtn": "#_ev_5 > div > div.good-panel-close.good-panel-close-x.panelClose",
+    "findAStorePopupTxt": "#_ev_5 > div > h3",
+    "zipCityStTxtBox": "#addressText",
+    "storeSearchMsg": "#_ev_5 > div > div.store-pickup-selector-container > p.pickup-store-list-label.initialStoreListLabel.search-warning-no-results",
+    "selectMilesBox": "#distanceRadius",
+    "searchBtn": "#_ev_5 > div > div.store-pickup-selector-header > form > button",
+    "pickThisStoreBtn": "div button[name='bopis-button'] ",
+    "findPickAStoreText": "div[class*='store-pickup-selector-container'] p[class*='pickup-store-list-label initialStoreListLabel']"
+  },
+  "pipPage": {
+    "productLabel": ".pip-summary",
+    "swatchLabel": "#productSubsetItem1 > div > div > div.subset-attributes.subsetAttributes > h4.multiple-graphical-att > span.selectedValue"
+  },
 
-    "searchPage": {
-        "searchBox":"form[name=nav-search-form]"
-    },
-    "productPage":{
-        "selectedColor": ".multiple-graphical-att > .selectedValue",
-        "shipToStoreBtn": "#shipToStore0",
-        "bostsChangeStoreLink": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > div.store-details-container > a.open-store-selector.ship-to-store-selector.openStorePickupSelectorBosts",
-        "bopisChangeStoreLink": ".storePickup > .receiving-method-label > .no-nearby-availability > .receiving-method-detail > .messagePrefix",
-        "notAvailableNearTxt": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > div.no-nearby-availability.noNearbyAvailability.shipToStoreAvailabilityMessage0 > span > span.messagePrefix",
-        "shipToStoreToolTip": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > span > img",
-        "toolTipPopup": ".shipItemTooltip",
-        "aoddText": "div.order-pickup-aodd > p > span.orderPickupAoddDeliveryWindow"
-
-    },
-    "findAStorePopUp":{
-        "closeBtn": "#_ev_5 > div > div.good-panel-close.good-panel-close-x.panelClose",
-        "findAStorePopupTxt": "#_ev_5 > div > h3",
-        "zipCityStTxtBox": "#addressText",
-        "storeSearchMsg": "#_ev_5 > div > div.store-pickup-selector-container > p.pickup-store-list-label.initialStoreListLabel.search-warning-no-results",
-        "selectMilesBox": "#distanceRadius",
-        "searchBtn": "#_ev_5 > div > div.store-pickup-selector-header > form > button"
-        
-    },
-    "pipPage":{
-        "productLabel":".pip-summary",
-        "swatchLabel":"#productSubsetItem1 > div > div > div.subset-attributes.subsetAttributes > h4.multiple-graphical-att > span.selectedValue"
-    },
-    
-    "breadcrumbs": {
-        "firstBreadcrumb": "#breadcrumbs > :nth-child(1) > a > span",
-        "secondBreadcrumb": "#breadcrumbs > :nth-child(2) > a > span",
-        "thirdBreadcrumb": ":nth-child(3) > h1" 
-    }
-
+  "breadcrumbs": {
+    "firstBreadcrumb": "#breadcrumbs > :nth-child(1) > a > span",
+    "secondBreadcrumb": "#breadcrumbs > :nth-child(2) > a > span",
+    "thirdBreadcrumb": ":nth-child(3) > h1"
+  },
+  "myStore": {
+    "myStorePopupHeading": "div[class*='header-store-text']",
+    "zipTextBox": "input[id*='pac-input']",
+    "storeOption": "#my-store-flyout  li:nth-child(1) > a",
+    "setAsMyStoreBtn": "#my-store-flyout  li:nth-child(1) > button"
+  }
 }

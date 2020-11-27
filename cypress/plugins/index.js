@@ -27,8 +27,9 @@ module.exports = (on, config) => {
   if (!brand) {
     brand = "we";
   }
-
-  if (config.env.viewportWidth && config.env.viewportHeight) {
+  console.log(config);
+  if (config.viewportWidth && config.viewportHeight) {
+    console.log("checking mobile");
     config.env.device = "mobile";
   }
   config.env.brand = brand;

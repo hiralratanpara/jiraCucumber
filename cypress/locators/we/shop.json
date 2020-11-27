@@ -2,6 +2,8 @@
     "category":{
         "superCat":".category-6 > .c-nav-category_link > span",
         "leftMenu":".left-nav > :nth-child(2) > :nth-child(3) > a",
-        "visualNav":".shop-hero-1"
+        "visualNav":".shop-hero-1",
+        "faucetValvetCheckBox": " label[for*='Velvet'] > span",
+        "firstSofaShown": "#subCatListContainer > ul > li:nth-child(1) > a"
     }
 }
