@@ -12,18 +12,10 @@ describe("PB verify the bopis change store link ", () => {
   });
 
   before(() => {
-    // cy.visit(data.brandURL);
-    // cy.viewport(1280, 800);
-    // cy.visit("https://regression.potterybarn.com/", {
-    //   auth: {
-    //     username: "ptqaenv",
-    //     password: "ta8PoLe",
-    //   },
-    // });
-    var region = Cypress.env("region");
-    var urls = Cypress.env(region);
-    var brand = Cypress.env("brand");
-    var url = urls[brand];
+    const region = Cypress.env("region");
+    const urls = Cypress.env(region);
+    const brand = Cypress.env("brand");
+    const url = urls[brand];
 
     if (region.toUpperCase() === "PROD") {
       cy.visit(url);
@@ -35,14 +27,21 @@ describe("PB verify the bopis change store link ", () => {
         },
       });
     }
-  });
 
-  it("Should search SKU", () => {
-    cy.get(searchPage.searchBox).type(data.homePageData.skuNo);
+    cy.get("body")
+      .find(".stickyOverlayCloseButton", { timeout: 10000 })
+      .its("length")
+      .then((res) => {
+        if (res > 0) {
+          cy.get(".stickyOverlayCloseButton").click();
+        }
+      });
+    cy.get(searchPage.searchBox).type(data.bopis.skuNo);
     cy.get(searchPage.searchBox).submit();
   });
 
-  it("Verify the popup displays after clicking on bopis ", () => {
+  it('Verify the "pick this Store" link when product is not available ', () => {
+    cy.viewport(1280, 800);
     cy.get(productPage.bopisChangeStoreLink).click();
     cy.get(findAStorePopUp.findAStorePopupTxt).should(
       "have.text",
@@ -55,9 +54,10 @@ describe("PB verify the bopis change store link ", () => {
     cy.get(findAStorePopUp.zipCityStTxtBox).type(
       data.findAStorePopUpData.cityName
     );
-    cy.get(findAStorePopUp.zipCityStTxtBox).type(
+    /*  cy.get(findAStorePopUp.zipCityStTxtBox).select(
       data.findAStorePopUpData.pressEnter
-    );
+    );*/
+    cy.get(findAStorePopUp.searchBtn).click();
     cy.get(findAStorePopUp.storeSearchMsg).should(
       "have.text",
       data.findAStorePopUpData.storeSearchMsgTxt

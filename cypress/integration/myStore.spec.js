@@ -63,10 +63,10 @@ describe("WE verify my store ", () => {
   });
 
   it("Verify the selected store is set as my store in home page", () => {
-    // cy.get(searchPage.selectedStoreLink).should(
-    //   "have.text",
-    //   data.myStore.eastonTownCenterTxtHomePage
-    // );
     cy.get(searchPage.selectedStoreLink).should("be.visible");
+    cy.get(searchPage.selectedStoreLink).should(
+      "have.text",
+      data.myStore.eastonTownCenterTxtHomePage
+    );
   });
 });
