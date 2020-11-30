@@ -1,72 +1,96 @@
 /// <reference types='Cypress'/>
-//import WebStoreHomePage from '../../../pageObjects/webStoreUI/homePage';
-import WsiSelectStorePage from '../../pageObjects/ws/bostsChangeStorePopupPage';
+import { data } from "../fixtures/we/test-data.json";
+import {
+  searchPage,
+  findAStorePopUp,
+  productPage,
+} from "../locators/we/pip.json";
 
-const wsiSelectStorePage = new WsiSelectStorePage();
-//const homePage = new WebStoreHomePage();
+describe("BOSTS Search Validation", () => {
+  Cypress.on("uncaught:exception", (err, runnable) => {
+    return false;
+  });
+  before(() => {
+    const region = Cypress.env("region");
+    const urls = Cypress.env(region);
+    const brand = Cypress.env("brand");
+    const url = urls[brand];
 
-describe('wsi ship to store ', () => {
-    Cypress.on('uncaught:exception', (err, runnable) => {
-        return false;
+    if (region.toUpperCase() === "PROD") {
+      cy.visit(url);
+    } else {
+      cy.visit(url, {
+        auth: {
+          username: Cypress.env("username"),
+          password: Cypress.env("password"),
+        },
       });
-    // it('Verify the BOSTS link in WS', () => {
-    //     //careerPage.carrerInfo();
-    //     //cy.viewport(1280, 800);
-    //     wsiSelectStorePage.bostsChangeStoreNotAvailable();
-    // });
+    }
 
-    it('Should search SKU', () => {
-        cy.get('form[name=nav-search-form]').type('4212770').submit()
-        //cy.get(searchPage.searchBox).type(data.homePageData.skuNo);
-     })
-     
-     it('Choose bopis and open up a store selector', () => {
-         cy.get('#pickUpInStore0').click();
-     })
-     it('Search for a city within 25 miles were product is available for pickup', () => {
-         
-         cy.get('#addressText').click();
-         cy.wait(1000);
-         cy.get('#addressText').type('Sacramento, CA, USA');
-         cy.get('#addressText').type('{enter}', { release: true })
-          cy.get('#_ev_5 > div > div.store-pickup-selector-container > p.pickup-store-list-label.initialStoreListLabel.store-search-result-header').should('have.text','Find & Pick a Store')
-     
-         // cy.get('#distanceRadius').focus();
-         // //$('#distanceRadius').val("200");
-         // cy.get('#distanceRadius').select('200');
-     
-         //cy.get('store-pickup-selector-forms').submit();
-        //cy.get('.distance-radius').click();
-         //cy.wait(5000);
-         //  cy.get('#_ev_5 > div > div.store-pickup-selector-header > form > button').click();
-         //  cy.get('#_ev_5 > div > div.store-pickup-selector-container > p.pickup-store-list-label.initialStoreListLabel.search-warning-no-results').should('have.text','This product is not available in any stores within 200 miles.');
-         //  cy.wait(5000);
-     })
-     
-     it('select a store from the options available for pick up', () => {
-         cy.get(findAStorePopUp.pickThisStoreBtn).click();
-         
-     })
-     
-     it('same store is displayed which selected by clicking pick this store', () => {
-        cy.get(productPage.bopisStoreSelectedName).should('have.text','Galleria At Roseville')
-        cy.get(productPage.seeStoreDetailsLinkTxt).should('have.text', 'See Store Details');
-     })
-     
-     it('bopis see store details link', () => {
-         cy.get(productPage.bopisStoreSelectedName).should('have.text','Galleria At Roseville')
-      })
-     
-      it('clicking on see store details link', () => {
-         cy.get(productPage.seeStoreDetailsLinkTxt).click();
-         // cy.get('a.shipToStoreDetails hide-detail ship-to-store-selector').click();
-         // cy.get(productPage.seeStoreDetailsLinkTxt).should('have.text', 'Hide Store Details');
-      })
-     
-     
+    cy.get("body")
+      .find(".stickyOverlayCloseButton", { timeout: 10000 })
+      .its("length")
+      .then((res) => {
+        if (res > 0) {
+          cy.get(".stickyOverlayCloseButton").click();
+        }
+      });
+    cy.get(searchPage.searchBox).type(data.homePageData.skuNo).submit();
+  });
 
+  it("Choose bopis and open up a store selector", () => {
+    cy.get("#pickUpInStore0").click();
+  });
+  it("Search for a city within 25 miles were product is available for pickup", () => {
+    cy.get("#addressText", { timeout: 1000 }).click();
+    cy.get("#addressText").type("Sacramento, CA, USA");
+    cy.get("#addressText").type("{enter}", { release: true });
+    cy.get(findAStorePopUp.storeSearchMsg).should(
+      "have.text",
+      data.findAStorePopUpData.storeSearchMsgTxt
+    );
+  });
 
+  it("Verify the store selector search the store within 200 miles", () => {
+    cy.get(findAStorePopUp.selectMilesBox).focus();
+    cy.get(findAStorePopUp.selectMilesBox).select("200");
+    cy.get(findAStorePopUp.searchBtn).click();
+    cy.get(findAStorePopUp.storeSearchMsg).should(
+      "have.text",
+      data.findAStorePopUpData.storeSearch200MilesMsgTxt
+    );
+    //cy.get(".initialStoreListLabel").should("have.text", "Find & Pick a Store");
+  });
 
-   
+  it("select a store from the options available for pick up", () => {
+    cy.get(findAStorePopUp.pickThisStoreBtn).click();
+  });
 
+  it("same store is displayed which selected by clicking pick this store", () => {
+    cy.get(productPage.bopisStoreSelectedName).should(
+      "have.text",
+      "Galleria At Roseville"
+    );
+    cy.get(productPage.seeStoreDetailsLinkTxt).should(
+      "have.text",
+      "See Store Details"
+    );
+  });
+
+  it("bopis see store details link", () => {
+    cy.get(productPage.bopisStoreSelectedName).should(
+      "have.text",
+      "Galleria At Roseville"
+    );
+  });
+
+  it("clicking on see store details link", () => {
+    cy.get(productPage.seeStoreDetailsLinkTxt).click();
+    // cy.get('a.shipToStoreDetails hide-detail ship-to-store-selector').click();
+    // cy.get(productPage.seeStoreDetailsLinkTxt).should('have.text', 'Hide Store Details');
+  });
+
+  it("close the store search popup", () => {
+    cy.get(findAStorePopUp.closeBtn).click();
+  });
 });
