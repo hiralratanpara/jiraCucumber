@@ -19,7 +19,10 @@
       "toolTipHeader": "Reduced Shipping Ship To Store",
       "toolTipTxt": "We'll ship the item to your selected store in the time frame shown for $39.99 (or $79.99 if order total exceeds $1,000). You'll be notified when your items have arrived and have 7 days to pick them up. Does not includes any White Glove service, lifting/moving, or assembly of items. Please refer to the item dimensions to ensure this item will fit in your vehicle.",
       "notAvailableText": "Not available near ",
-      "availableText": "Available for pickup"
+      "availableText": "Available for pickup",
+      "keyDetailsTxt": "KEY DETAILS",
+      "detailedSpecificationTxt": "DETAILED SPECIFICATIONS",
+      "shippingOptText": "SHIPPING OPTIONS"
     },
     "findAStorePopUpData": {
       "findAStoreTxt": "Find & Pick a Store",

@@ -1,7 +1,7 @@
 /// <reference types='Cypress'/>
 
-import { productPage, searchPage } from "../locators/ws/pip.json";
-import { data } from "../fixtures/ws/test-data.json";
+import { productPage, searchPage } from "../locators/we/pip.json";
+import { data } from "../fixtures/we/test-data.json";
 describe("PB bosts iball", () => {
   Cypress.on("uncaught:exception", (err, runnable) => {
     return false;
@@ -19,6 +19,7 @@ describe("PB bosts iball", () => {
     var region = Cypress.env("region");
     var urls = Cypress.env(region);
     var brand = Cypress.env("brand");
+    //var brand = Cypress.env(brand);
     var url = urls[brand];
 
     if (region.toUpperCase() === "PROD") {
@@ -37,12 +38,26 @@ describe("PB bosts iball", () => {
     cy.get(searchPage.searchBox).type(data.homePageData.skuNo);
     cy.get(searchPage.searchBox).submit();
   });
+  it("Verify the promotional popup is closed", () => {
+    cy.get("body")
+      .find(".stickyOverlayCloseButton")
+      .its("length")
+      .then((res) => {
+        if (res > 0) {
+          cy.get(".stickyOverlayCloseButton").click();
+        }
+      });
+  });
 
   it("Should check the header of the Bosts i ball ", () => {
-    cy.get(productPage.shipToStoreToolTip).trigger("mouseover");
-    cy.get(productPage.toolTipPopup).contains(
-      data.productPageData.toolTipHeader
-    );
+    if (url.toUpperCase() === "pb") {
+      cy.get(productPage.shipToStoreToolTip).trigger("mouseover");
+      cy.get(productPage.toolTipPopup).contains(
+        data.productPageData.toolTipHeader
+      );
+    } else {
+      console.log("iball not found");
+    }
   });
 
   it("Should check the text of the Bosts i ball ", () => {

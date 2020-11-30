@@ -20,7 +20,16 @@
     "aoddText": "div.order-pickup-aodd > p > span.orderPickupAoddDeliveryWindow",
     "bopisStoreSelectedName": "label[for*='pickUpInStore0'] dl dd span[class*='sts-location-name']",
     "seeStoreDetailsLinkTxt": "label[for*='pickUpInStore0'] dl a[class*='show-detail']",
-    "hideStoreDetails": "label[for*='pickUpInStore0'] dl a[class*='hide-detail ship-to-store-selector']"
+    "hideStoreDetails": "label[for*='pickUpInStore0'] dl a[class*='hide-detail ship-to-store-selector']",
+    "addPhoto": "p.upload-link",
+    "selectYourContent": " div.sc-htpNat.VRteh > div",
+    "addPhotoPopupCloseBtn": " button[aria-label*='Close media uploader']",
+    "overview": "#tab0",
+    "keyDetails": "#panel0 > div > div > h6",
+    "detailsAndDimension": "#tab1",
+    "detailedSpecifications": "#panel1 > div > div > p:nth-child(1) > b",
+    "shippingAndReturns": "#tab2",
+    "shippingOptions": "#panel2 > div > div > p:nth-child(1) > b"
   },
   "findAStorePopUp": {
     "closeBtn": "#_ev_3 > div > div.good-panel-close.good-panel-close-x.panelClose",
