@@ -25,7 +25,7 @@ describe("WE Test Shop Page ", () => {
         },
       });
     }
-
+    cy.wait(5000);
     cy.get("body")
       .find(".stickyOverlayCloseButton", { timeout: 50000 })
       .its("length")
@@ -37,6 +37,7 @@ describe("WE Test Shop Page ", () => {
       });
   });
   it("Should search SKU", () => {
+    //cy.viewport(1000, 1200);
     cy.get(searchPage.searchBox).type(data.homePageData.skuNo).submit();
   });
 
@@ -55,18 +56,18 @@ describe("WE Test Shop Page ", () => {
     cy.get(category.superCat).click();
     cy.get(category.leftMenu).click();
 
-    cy.get("body")
-      .find(
-        "#join-email-campaign > .shader > .modal-scroll > .modal_component > .btnClose"
-      )
-      .its("length")
-      .then((res) => {
-        if (res > 0) {
-          cy.get(
-            "#join-email-campaign > .shader > .modal-scroll > .modal_component > .btnClose"
-          ).click();
-        }
-      });
+    // cy.get("body")
+    //   .find(
+    //     "#join-email-campaign > .shader > .modal-scroll > .modal_component > .btnClose"
+    //   )
+    //   .its("length")
+    //   .then((res) => {
+    //     if (res > 0) {
+    //       cy.get(
+    //         "#join-email-campaign > .shader > .modal-scroll > .modal_component > .btnClose"
+    //       ).click();
+    //     }
+    //   });
     cy.wait(5000);
     cy.get(category.visualNav).should("be.visible");
   });
@@ -137,10 +138,27 @@ describe("WE Test Shop Page ", () => {
   });
 
   it("should display the product related to material selected valvet", () => {
-    cy.get(category.superCat).click();
-    cy.get(category.leftMenu).click({ force: true });
+    // cy.get(category.superCat).click();
+    // cy.get(category.leftMenu).click({ force: true });
+
+    cy.get("body")
+      .find(
+        "#join-email-campaign > .shader > .modal-scroll > .modal_component > .btnClose"
+      )
+      .its("length")
+      .then((res) => {
+        if (res > 0) {
+          cy.get(
+            "#join-email-campaign > .shader > .modal-scroll > .modal_component > .btnClose"
+          ).click();
+        }
+      });
+
     if (cy.get(category.faucetValvetCheckBox).click()) {
-      cy.get(category.firstSofaShown).should("be.visible");
+      //cy.get(category.firstSofaShown).should("be.visible");
+      cy.get(
+        '[href="/products/harmony-sofa-h2479/?pkey=cmaterial-m-material-ff0011-1"] > .product-image'
+      ).should("be.visible");
     }
   });
 });

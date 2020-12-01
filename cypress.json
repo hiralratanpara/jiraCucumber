@@ -8,7 +8,9 @@
     "regression": {
       "we": "https://regression.westelm.com",
       "ws": "https://regression.william-sonoma.com",
-      "pb": "https://regression.potterybarn.com"
+      "pb": "https://regression.potterybarn.com",
+      "pbMobile": "https://regression.potterybarn.com/m/"
+      
     },
     "aktest": {
       "we": "https://aktest-www.westelm.com",

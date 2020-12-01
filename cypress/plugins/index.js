@@ -27,7 +27,6 @@ module.exports = (on, config) => {
   if (!brand) {
     brand = "we";
   }
-
   config.env.brand = brand;
   config.env.region = region;
   return config;
