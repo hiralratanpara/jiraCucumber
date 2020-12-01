@@ -1,5 +1,5 @@
 {
-    "category":{
+    "category": {
         "superCat":".category-6 > .c-nav-category_link > span",
         "leftMenu":".left-nav > :nth-child(2) > :nth-child(3) > a",
         "visualNav":".shop-hero-1",
@@ -10,14 +10,23 @@
         "subcat-aside": "[sub-cat-aside]",
         "Shop-ShopFacets": "[shop_facets]",
         "my location": "[passive-filtering-container]",
-        "firstSubcataside": "#subcat-page .side-nav.sticky .shop_facets .accordion-container h3",
-        "secondSubcataside": "#subcat-page .no-bopis-availability .accordion-title",
-        "thirdSubcataside": "#subcat-page .accordion-container section:nth-child(5) .accordion-title",
-        "fourthSubcataside": "#subcat-page .accordion-container section:nth-child(6) .accordion-title",
-        "fifthaSubcataside": "#subcat-page > div.sub-cat-container > aside > div.side-nav.sticky > div.shop_facets > div.accordion-container > section:nth-child(7) > div.accordion-title > h4",
-        "sixsthSubcataside": "#subcat-page .accordion-container section:nth-child(8) .accordion-title",
-        "seventhSubcataside": "#subcat-page .accordion-container section:nth-child(9) .accordion-title",
-        "eightSubcataside": "#subcat-page .accordion-container section:nth-child(10) .accordion-title",
-        "ninthSubcataside": "#subcat-page .accordion-container section:nth-child(11) .accordion-title"
+        "FilterBySubcataside": "#subcat-page .side-nav.sticky .shop_facets .accordion-container h3",
+        "AvailabilitySubcataside": "#subcat-page .no-bopis-availability .accordion-title",
+        "MaterialSubcataside": "#subcat-page .accordion-container section:nth-child(5) .accordion-title",
+        "LengthSubcataside": "#subcat-page .accordion-container section:nth-child(6) .accordion-title",
+        "ColorSubcataside": "#subcat-page > div.sub-cat-container > aside > div.side-nav.sticky > div.shop_facets > div.accordion-container > section:nth-child(7) > div.accordion-title > h4",
+        "SeatingCapacitySubcataside": "#subcat-page .accordion-container section:nth-child(8) .accordion-title",
+        "SeatFirmnessSubcataside": "#subcat-page .accordion-container section:nth-child(9) .accordion-title",
+        "FeaturesSubcataside": "#subcat-page .accordion-container section:nth-child(10) .accordion-title",
+        "PriceSubcataside": "#subcat-page .accordion-container section:nth-child(11) .accordion-title",
+        "Availability1Checkbox": "#ship_to_home\\|multi-select\\|Availability-In_Stock_and_Ready_to_Ship_id",
+        "length101-110": " #subcat-page div.sub-cat-container aside div.side-nav.sticky div.shop_facets div.accordion-container section:nth-child(6) div.accordion-content ul li:nth-child(1) fieldset label a",
+        "addToFavorite": "#subcat-page > div.sub-cat-container > section > div:nth-child(9) > div > div:nth-child(1) > div > div > span:nth-child(4) > label",
+        "Material1Checkbox": "section:nth-child(5) div.accordion-content > ul > li:nth-child(4) > fieldset > input",
+        "Length1Checkbox":"#subcat-page div.sub-cat-container aside div.side-nav.sticky div.shop_facets div.accordion-container section:nth-child(6) div.accordion-content ul li:nth-child(1) fieldset label",
+        "Length2Checkbox": "#subcat-page div.sub-cat-container aside div.side-nav.sticky div.shop_facets div.accordion-container section:nth-child(6) div.accordion-content ul li:nth-child(2) fieldset label",
+        "SortBy": "#sortBy label span",
+        "DownArrow": "#sortBy label select",
+        "PriceLowToHIGH": "#sortBy label select option:nth-child(4)"
     }
 }

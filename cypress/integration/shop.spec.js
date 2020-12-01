@@ -94,45 +94,52 @@ describe("WE Test Shop Page ", () => {
     });
 
     it("should display the correct values in the sub-cat-aside", () => {
-      cy.get(category.firstSubcataside).should(
+      cy.get(category.FilterBySubcataside).should(
         "have.text",
-        data.subCatAside.firstSubcataside
+        data.subCatAside.FilterBySubcataside
       );
-      cy.get(category.secondSubcataside).should(
+      cy.get(category.AvailabilitySubcataside).should(
         "have.text",
-        data.subCatAside.secondSubcataside
+        data.subCatAside.AvailabilitySubcataside
       );
-      cy.get(category.thirdSubcataside).should(
+      cy.get(category.MaterialSubcataside).should(
         "have.text",
-        data.subCatAside.thirdSubcataside
+        data.subCatAside.MaterialSubcataside
       );
-      cy.get(category.fourthSubcataside).should(
+      cy.get(category.LengthSubcataside).should(
         "have.text",
-        data.subCatAside.fourthSubcataside
+        data.subCatAside.LengthSubcataside
       );
-      cy.get(category.fifthaSubcataside).should(
+      cy.get(category.ColorSubcataside).should(
         "have.text",
-        data.subCatAside.fifthaSubcataside
+        data.subCatAside.ColorSubcataside
       );
-      cy.get(category.sixsthSubcataside).should(
+      cy.get(category.SeatingCapacitySubcataside).should(
         "have.text",
-        data.subCatAside.sixsthSubcataside
+        data.subCatAside.SeatingCapacitySubcataside
       );
-     cy.get(category.seventhSubcataside).should(
+     cy.get(category.SeatFirmnessSubcataside).should(
        "have.text",
-       data.subCatAside.seventhSubcataside
+       data.subCatAside.SeatFirmnessSubcataside
      );
-     cy.get(category.eightSubcataside).should(
+     cy.get(category.FeaturesSubcataside).should(
        "have.text",
-       data.subCatAside.eightSubcataside
+       data.subCatAside.FeaturesSubcataside
      );
-     cy.get(category.ninthSubcataside).should(
+     cy.get(category.PriceSubcataside).should(
        "have.text",
-       data.subCatAside.ninthSubcataside
+       data.subCatAside.PriceSubcataside
      );
     });
 
-   it("should display 'filter by' in left menu", () => {
-    cy.get(category.visualNav).should("be.visible");
+   it("should display 'SORT BY'", () => {
+     cy.get(category.SortBy).should("be.visible");
+    });
+   it("should select down arrow",() => {
+     cy.get(category.DownArrow).should("be.visible");
+    });
+   it("should select PriceLowToHIGH", () => {
+     cy.get(category.PriceLowToHIGH).should("be.visible");
    });
-});
+   });
+

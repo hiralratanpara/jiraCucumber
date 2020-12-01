@@ -41,15 +41,15 @@
 
    },
    "subCatAside": {
-       "firstSubcataside": "Filter By:",
-       "secondSubcataside": "\n            Availability\n          ",
-       "thirdSubcataside": "Material ",
-       "fourthSubcataside": "Length ",
-       "fifthaSubcataside": "Color",
-       "sixsthSubcataside": "Seating Capacity ",
-       "seventhSubcataside": "Seat Firmness ",
-       "eightSubcataside": "Features ",
-       "ninthSubcataside": "Price "
+       "FilterBySubcataside": "Filter By:",
+       "AvailabilitySubcataside": "\n            Availability\n          ",
+       "MaterialSubcataside": "Material ",
+       "LengthSubcataside": "Length ",
+       "ColorSubcataside": "Color",
+       "SeatingCapacitySubcataside": "Seating Capacity ",
+       "SeatFirmnessSubcataside": "Seat Firmness ",
+       "FeaturesSubcataside": "Features ",
+       "PriceSubcataside": "Price "
    }
     
 }
