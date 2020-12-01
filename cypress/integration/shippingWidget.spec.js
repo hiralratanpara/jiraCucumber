@@ -1,38 +1,51 @@
 /// <reference types='Cypress'/>
 
-import { data } from "../../fixtures/we/test-data.json";
+import { data } from "../fixtures/we/test-data.json";
 import {
   searchPage,
   findAStorePopUp,
   productPage,
-} from "../../locators/ws/pip.json";
+} from "../locators/we/pip.json";
 
-//const homePage = new WebStoreHomePage();
-
-describe("wsi ship to store ", () => {
+describe("Shipping widget validation", () => {
   Cypress.on("uncaught:exception", (err, runnable) => {
     return false;
   });
 
   before(() => {
-    cy.visit(data.brandURL);
-    cy.get(searchPage.searchBox).type(data.homePageData.skuNo);
-    cy.get(searchPage.searchBox).submit();
-  });
-  it("Verify BOSTS Availability", () => {
-    cy.get(productPage.selectedColor).should(
-      "have.text",
-      data.productPageData.productColor
-    );
-    cy.wait(5000);
+    const region = Cypress.env("region");
+    const urls = Cypress.env(region);
+    const brand = Cypress.env("brand");
+    const url = urls[brand];
+
+    if (region.toUpperCase() === "PROD") {
+      cy.visit(url);
+    } else {
+      cy.visit(url, {
+        auth: {
+          username: Cypress.env("username"),
+          password: Cypress.env("password"),
+        },
+      });
+    }
+
     cy.get("body")
-      .find(".stickyOverlayCloseButton")
+      .find(".stickyOverlayCloseButton", { timeout: 10000 })
       .its("length")
       .then((res) => {
         if (res > 0) {
           cy.get(".stickyOverlayCloseButton").click();
         }
       });
+    cy.get(searchPage.searchBox).type(data.homePageData.skuNo);
+    cy.get(searchPage.searchBox).submit();
+  });
+
+  it("Verify BOSTS Availability", () => {
+    cy.get(productPage.selectedColor).should(
+      "have.text",
+      data.productPageData.productColor
+    );
     cy.get(productPage.aoddText).should(
       "contain.text",
       data.productPageData.availableText
@@ -72,7 +85,6 @@ describe("wsi ship to store ", () => {
   });
 
   it("Verify the BOPIS overlay opens on change store click", () => {
-    wsiShipPage.BOPISChangeStore();
     cy.get(productPage.bopisChangeStoreLink).click();
     cy.get(findAStorePopUp.findAStorePopupTxt).should(
       "have.text",

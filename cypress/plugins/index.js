@@ -28,9 +28,6 @@ module.exports = (on, config) => {
     brand = "we";
   }
 
-  if (config.env.viewportWidth && config.env.viewportHeight) {
-    config.env.device = "mobile";
-  }
   config.env.brand = brand;
   config.env.region = region;
   return config;

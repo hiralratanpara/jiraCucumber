@@ -1,40 +1,41 @@
 {
-"data":{
-    "brandURL":{
-        "url": "https://westelm.com/"
+  "data": {
+    "brandURL": {
+      "url": "https://westelm.com/"
     },
 
     "loginPageData": {
-        "url": "https://westelm.com/"
+      "url": "https://westelm.com/"
     },
 
     "homePageData": {
-        "skuNo": "3377284",
-        "skuName": "Hayes Sconce, Dark Bronze, Individual",
-        "defaultSwatch":"Dark Bronze"
-       
+      "skuNo": "3377284",
+      "skuName": "Hayes Sconce, Dark Bronze, Individual",
+      "defaultSwatch": "Dark Bronze"
     },
-    "productPageData":{
-        "productName": "Hayes 1-Light Sconce",
-        "productColor": "Dark Bronze",
-        "toolTipHeader": "Reduced Shipping Ship To Store",
-        "toolTipTxt": "We'll ship the item to your selected store in the time frame shown for $39.99 (or $79.99 if order total exceeds $1,000). You'll be notified when your items have arrived and have 7 days to pick them up. Does not includes any White Glove service, lifting/moving, or assembly of items. Please refer to the item dimensions to ensure this item will fit in your vehicle.",
-        "notAvailableText": "Not available near ",
-        "availableText": "Available for pickup"
-
+    "productPageData": {
+      "productName": "Hayes 1-Light Sconce",
+      "productColor": "Dark Bronze",
+      "toolTipHeader": "Reduced Shipping Ship To Store",
+      "toolTipTxt": "We'll ship the item to your selected store in the time frame shown for $39.99 (or $79.99 if order total exceeds $1,000). You'll be notified when your items have arrived and have 7 days to pick them up. Does not includes any White Glove service, lifting/moving, or assembly of items. Please refer to the item dimensions to ensure this item will fit in your vehicle.",
+      "notAvailableText": "Not available near ",
+      "availableText": "Available for pickup",
+      "seeStoreDetails": "See Store Details",
+      "hideStoreDetails": "Hide Store Details"
     },
-    "findAStorePopUpData":{
-       "findAStoreTxt": "Find & Pick a Store",
-       "cityName": "nyc",
-       "cityName1": "Sacramento, CA, USA",
-       "pressEnter": "{enter}",
-       "storeSearchMsgTxt": "This product is not available in any stores within 25 miles."
-        
+    "findAStorePopUpData": {
+      "findAStoreTxt": "Find & Pick a Store",
+      "cityName": "NYC, NY,USA",
+      "cityName1": "Sacramento, CA, USA",
+      "pressEnter": "{enter}",
+      "storeSearchMsgTxt": "This product is not available in any stores within 25 miles.",
+      "storeSearch200MilesMsgTxt": "This product is not available in any stores within 200 miles.",
+      "storeLocation": "Galleria At Roseville"
     },
     "breadcrumb": {
-        "firstBreadcrumbVal": "Home",
-        "secondBreadcrumbVal": "Furniture",
-        "thirdBreadcrumbVal": "Sofas + Loveseats"        
+      "firstBreadcrumbVal": "Home",
+      "secondBreadcrumbVal": "Furniture",
+      "thirdBreadcrumbVal": "Sofas + Loveseats"
     },
     "bopis":{
         "skuNo": "1796378"
@@ -50,8 +51,11 @@
        "SeatFirmnessSubcataside": "Seat Firmness ",
        "FeaturesSubcataside": "Features ",
        "PriceSubcataside": "Price "
-   }
-    
-}
-
+   },
+    "myStore": {
+      "myStoreTxt": " My Store ",
+      "zip": "03456",
+      "eastonTownCenterTxtHomePage": " Wayside Commons "
+    }
+  }
 }
