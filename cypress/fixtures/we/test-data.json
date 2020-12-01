@@ -21,16 +21,21 @@
       "notAvailableText": "Not available near ",
       "availableText": "Available for pickup",
       "seeStoreDetails": "See Store Details",
-      "hideStoreDetails": "Hide Store Details"
+      "hideStoreDetails": "Hide Store Details",
+      "detailedSpecificationTxt": "DETAILED SPECIFICATIONS",
+      "shippingOptText": "FRONT DOOR DELIVERY",
+      "keyDetailsTxt": "KEY DETAILS"
     },
     "findAStorePopUpData": {
       "findAStoreTxt": "Find & Pick a Store",
       "cityName": "NYC, NY,USA",
       "cityName1": "Sacramento, CA, USA",
       "pressEnter": "{enter}",
-      "storeSearchMsgTxt": "This product is not available in any stores within 25 miles.",
-      "storeSearch200MilesMsgTxt": "This product is not available in any stores within 200 miles.",
-      "storeLocation": "Galleria At Roseville"
+      "storeSearchMsgTxt": "Available in 7 stores within 25 miles:",
+      "storeSearch200MilesMsgTxt": "Available in 21 stores within 200 miles:",
+      "storeLocation": "Empire Stores",
+      "bopisNotAvailable25Miles": "This product is not available in any stores within 25 miles.",
+      "bopisStoreAvailable200Mile": "Available in 1 store within 200 miles:"
     },
     "breadcrumb": {
       "firstBreadcrumbVal": "Home",
@@ -38,7 +43,8 @@
       "thirdBreadcrumbVal": "Sofas + Loveseats"
     },
     "bopis": {
-      "skuNo": "1796378"
+      "skuNo": "1796378",
+      "skuNo2": "2527697"
     },
     "subCatAside": {
       "firstSubcataside": "Filter By:",

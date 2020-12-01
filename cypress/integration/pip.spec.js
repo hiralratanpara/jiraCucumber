@@ -25,7 +25,7 @@ describe("WE Test Shop Page ", () => {
         },
       });
     }
-
+    cy.wait(3000);
     cy.get("body")
       .find(".stickyOverlayCloseButton", { timeout: 10000 })
       .its("length")
@@ -39,20 +39,21 @@ describe("WE Test Shop Page ", () => {
     cy.get(searchPage.searchBox).type(data.homePageData.skuNo).submit();
   });
 
-  it("Verify the promotional popup is closed", () => {
-    cy.get("body")
-      .find(".stickyOverlayCloseButton")
-      .its("length")
-      .then((res) => {
-        if (res > 0) {
-          cy.get(".stickyOverlayCloseButton").click();
-        }
-      });
-  });
+  // it("Verify the promotional popup is closed", () => {
+  //   cy.get("body")
+  //     .find(".stickyOverlayCloseButton")
+  //     .its("length")
+  //     .then((res) => {
+  //       if (res > 0) {
+  //         cy.get(".stickyOverlayCloseButton").click();
+  //       }
+  //     });
+  // });
 
   it("Verify the add a photo", () => {
     cy.get(productPage.addPhoto).should("be.visible");
     cy.get(productPage.addPhoto).click();
+    cy.wait(2000);
     cy.get(productPage.selectYourContent).should(
       "have.text",
       "Select Your Content"

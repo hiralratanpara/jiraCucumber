@@ -42,8 +42,9 @@ describe("Verify bosts", () => {
   });
 
   it("Verify the promotional popup is closed", () => {
+    cy.wait(5000);
     cy.get("body")
-      .find(".stickyOverlayCloseButton")
+      .find(".stickyOverlayCloseButton", { timeout: 100000 })
       .its("length")
       .then((res) => {
         if (res > 0) {
@@ -51,14 +52,13 @@ describe("Verify bosts", () => {
         }
       });
   });
-
+  /* 
   it("verify the bosts link", () => {
-    // cy.wait(5000);
-    // cy.scrollTo(600, 800);
-    if (cy.get(productPage.bostsNotAvailableNearTxt).should("be.visible")) {
+    //if (cy.get(productPage.bostsNotAvailableNearTxt).should("be.visible")) {
       cy.get(productPage.bosts).click();
+      cy.wait(1000);
       cy.get(findAStorePopUp.bostsFindAStorePopupTxt).should("be.visible");
-    } else cy.get(productPage.bostsChangeStoreLink).click();
+    //} else cy.get(productPage.bostsChangeStoreLink).click();
   });
 
   it("Search for a city within 25 miles were product is available for pickup", () => {
@@ -79,7 +79,7 @@ describe("Verify bosts", () => {
 
   it("close the store search popup", () => {
     cy.get(findAStorePopUp.closeBtn).click();
-  });
+  }); */
 
   it("verify the bosts change store link", () => {
     cy.get(productPage.bostsChangeStoreLink).click();
@@ -112,7 +112,44 @@ describe("Verify bosts", () => {
     );
   });
 
-  it("close the store search popup", () => {
-    cy.get(findAStorePopUp.closeBtn).click();
+  it("select a store from the options available for ship to store", () => {
+    cy.get(findAStorePopUp.shipToThisStore).click();
   });
+
+  it("same store is displayed which selected by clicking ship to this store", () => {
+    // cy.get(productPage.bopisStoreSelectedName).should(
+    //   "have.text",
+    //   "Galleria At Roseville"
+    // );
+    cy.get(productPage.bostsSeeStoreDetailsLink).should(
+      "have.text",
+      "See Store Details"
+    );
+  });
+
+  it("bopis see store details link", () => {
+    cy.get(productPage.bostsStoreSelectName).should(
+      "have.text",
+      "2 Main Street"
+    );
+  });
+
+  it("clicking on see store details link", () => {
+    cy.get(productPage.bostsSeeStoreDetailsLink).click();
+    cy.get(productPage.bostsHideStoreDetailsLink).should(
+      "have.text",
+      "Hide Store Details"
+    );
+  });
+  it("Clicking on the hide store details", () => {
+    cy.get(productPage.bostsHideStoreDetailsLink).click();
+  });
+
+  // it("close the store search popup", () => {
+  //   cy.get(findAStorePopUp.closeBtn).click();
+  // });
+
+  // it("close the store search popup", () => {
+  //   cy.get(findAStorePopUp.closeBtn).click();
+  // });
 });
