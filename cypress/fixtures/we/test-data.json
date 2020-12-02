@@ -31,8 +31,8 @@
       "cityName": "NYC, NY,USA",
       "cityName1": "Sacramento, CA, USA",
       "pressEnter": "{enter}",
-      "storeSearchMsgTxt": "Available in 7 stores within 25 miles:",
-      "storeSearch200MilesMsgTxt": "Available in 21 stores within 200 miles:",
+      "storeSearchMsgTxt": "Available in ",
+      "storeSearch200MilesMsgTxt": "Available in ",
       "storeLocation": "Empire Stores",
       "bopisNotAvailable25Miles": "This product is not available in any stores within 25 miles.",
       "bopisStoreAvailable200Mile": "Available in 1 store within 200 miles:"

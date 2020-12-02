@@ -4,7 +4,7 @@ import { searchPage, productPage, pipPage } from "../locators/we/pip.json";
 import { category } from "../locators/we/shop.json";
 import { breadcrumbs } from "../locators/we/pip.json";
 
-describe("WE Test Shop Page ", () => {
+describe("Test Shop Page ", () => {
   Cypress.on("uncaught:exception", (err, runnable) => {
     return false;
   });

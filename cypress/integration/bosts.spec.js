@@ -12,14 +12,6 @@ describe("Verify bosts", () => {
   });
 
   before(() => {
-    // console.log(Cypress.env(Cypress.env("brand")));
-    // //cy.visit(Cypress.env("brand"));
-    // cy.visit("https://regression.potterybarn.com/", {
-    //   auth: {
-    //     username: "ptqaenv",
-    //     password: "ta8PoLe",
-    //   },
-    // });
     var region = Cypress.env("region");
     var urls = Cypress.env(region);
     var brand = Cypress.env("brand");
@@ -52,34 +44,6 @@ describe("Verify bosts", () => {
         }
       });
   });
-  /* 
-  it("verify the bosts link", () => {
-    //if (cy.get(productPage.bostsNotAvailableNearTxt).should("be.visible")) {
-      cy.get(productPage.bosts).click();
-      cy.wait(1000);
-      cy.get(findAStorePopUp.bostsFindAStorePopupTxt).should("be.visible");
-    //} else cy.get(productPage.bostsChangeStoreLink).click();
-  });
-
-  it("Search for a city within 25 miles were product is available for pickup", () => {
-    cy.get(findAStorePopUp.zipCityStTxtBox).click();
-    cy.wait(1000);
-    cy.get(findAStorePopUp.zipCityStTxtBox).type(
-      data.findAStorePopUpData.cityName
-    );
-    cy.get(findAStorePopUp.zipCityStTxtBox).type(
-      data.findAStorePopUpData.pressEnter,
-      { release: true }
-    );
-    cy.get(findAStorePopUp.bostsStoreSearchMsg).should(
-      "have.text",
-      data.findAStorePopUpData.storeSearchMsgTxt
-    );
-  });
-
-  it("close the store search popup", () => {
-    cy.get(findAStorePopUp.closeBtn).click();
-  }); */
 
   it("verify the bosts change store link", () => {
     cy.get(productPage.bostsChangeStoreLink).click();
@@ -96,20 +60,14 @@ describe("Verify bosts", () => {
       data.findAStorePopUpData.pressEnter,
       { release: true }
     );
-    cy.get(findAStorePopUp.bostsStoreSearchMsg).should(
-      "have.text",
-      data.findAStorePopUpData.storeSearchMsgTxt
-    );
+    cy.get(findAStorePopUp.bostsStoreSearchMsg).should("be.visible");
   });
 
   it("Verify the store selector search the store within 200 miles", () => {
-    cy.get(findAStorePopUp.selectMilesBox).focus();
+    //cy.get(findAStorePopUp.selectMilesBox).focus();
     cy.get(findAStorePopUp.selectMilesBox).select("200");
     cy.get(findAStorePopUp.bostsSearchBtn).click();
-    cy.get(findAStorePopUp.bostsStoreSearchMsg).should(
-      "have.text",
-      data.findAStorePopUpData.storeSearch200MilesMsgTxt
-    );
+    cy.get(findAStorePopUp.bostsStoreSearchMsg).should("be.visible");
   });
 
   it("select a store from the options available for ship to store", () => {
@@ -117,10 +75,6 @@ describe("Verify bosts", () => {
   });
 
   it("same store is displayed which selected by clicking ship to this store", () => {
-    // cy.get(productPage.bopisStoreSelectedName).should(
-    //   "have.text",
-    //   "Galleria At Roseville"
-    // );
     cy.get(productPage.bostsSeeStoreDetailsLink).should(
       "have.text",
       "See Store Details"
@@ -144,12 +98,4 @@ describe("Verify bosts", () => {
   it("Clicking on the hide store details", () => {
     cy.get(productPage.bostsHideStoreDetailsLink).click();
   });
-
-  // it("close the store search popup", () => {
-  //   cy.get(findAStorePopUp.closeBtn).click();
-  // });
-
-  // it("close the store search popup", () => {
-  //   cy.get(findAStorePopUp.closeBtn).click();
-  // });
 });
