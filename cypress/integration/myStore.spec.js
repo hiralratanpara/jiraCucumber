@@ -2,7 +2,7 @@
 import { data } from "../fixtures/we/test-data.json";
 import { searchPage, myStore } from "../locators/we/pip.json";
 
-describe("WE verify my store ", () => {
+describe("Verify my store ", () => {
   Cypress.on("uncaught:exception", (err, runnable) => {
     return false;
   });
@@ -22,14 +22,9 @@ describe("WE verify my store ", () => {
           password: Cypress.env("password"),
         },
       });
-      // cy.visit("https://regression.westelm.com/", {
-      //   auth: {
-      //     username: "ptqaenv",
-      //     password: "ta8PoLe",
-      //   },
-      // });
     }
   });
+
   it("Verify the My store link is displayed ", () => {
     cy.get(searchPage.myStoreTxt).should("have.text", data.myStore.myStoreTxt);
   });
@@ -50,7 +45,7 @@ describe("WE verify my store ", () => {
   it("Verify the promotional popup is closed", () => {
     cy.wait(3000);
     cy.get("body")
-      .find(".stickyOverlayCloseButton",{ timeout: 50000 })
+      .find(".stickyOverlayCloseButton", { timeout: 50000 })
       .its("length")
       .then((res) => {
         if (res > 0) {
@@ -66,9 +61,5 @@ describe("WE verify my store ", () => {
 
   it("Verify the selected store is set as my store in home page", () => {
     cy.get(searchPage.selectedStoreLink).should("be.visible");
-    // cy.get(searchPage.selectedStoreLink).should(
-    //   "have.text",
-    //   data.myStore.eastonTownCenterTxtHomePage
-    // );
   });
 });

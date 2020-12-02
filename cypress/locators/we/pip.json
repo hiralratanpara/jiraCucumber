@@ -13,7 +13,7 @@
     "bopisChangeStoreLink": "label[for*='pickUpInStore0'] dl a[name*='bopis-panel']",
     "selectBopis": "#pickUpInStore0",
     "bostsNotAvailableNearTxt": "label[for*='shipToStore0'] span > span.messagePrefix",
-    "bopisNotAvailableNearTxt": "label[for*='shipToStore0'] div span[class*='messagePrefix']",
+    "bopisNotAvailableNearTxt": "#productSubsetItem1 > div.subset-skus > div > div.subset-pricing.subsetPricing > div.select-receiving-method.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.store-pickup > div > label.receiving-method-label.radio-box-label > div.no-nearby-availability.noNearbyAvailability.storePickupAvailabilityMessage0 > span > span.messagePrefix",
     "notAvailableNearTxt": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > div.no-nearby-availability.noNearbyAvailability.shipToStoreAvailabilityMessage0 > span > span.messagePrefix",
     "shipToStoreToolTip": "#productSubsetItem1 > div > div > div.subset-pricing.subsetPricing > div.select-receiving-method.pb-testing-default-land.storePickupOptions.bopis-show-hide-toggle.show-ship-to-and-store-pickup > ul > li.ship-to-store > label > span > img",
     "toolTipPopup": ".shipItemTooltip",

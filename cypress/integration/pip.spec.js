@@ -4,7 +4,7 @@ import { searchPage, productPage, pipPage } from "../locators/we/pip.json";
 import { category } from "../locators/we/shop.json";
 import { breadcrumbs } from "../locators/we/pip.json";
 
-describe("WE Test Shop Page ", () => {
+describe("Test pip Page ", () => {
   Cypress.on("uncaught:exception", (err, runnable) => {
     return false;
   });
@@ -39,25 +39,15 @@ describe("WE Test Shop Page ", () => {
     cy.get(searchPage.searchBox).type(data.homePageData.skuNo).submit();
   });
 
-  // it("Verify the promotional popup is closed", () => {
-  //   cy.get("body")
-  //     .find(".stickyOverlayCloseButton")
-  //     .its("length")
-  //     .then((res) => {
-  //       if (res > 0) {
-  //         cy.get(".stickyOverlayCloseButton").click();
-  //       }
-  //     });
-  // });
-
   it("Verify the add a photo", () => {
     cy.get(productPage.addPhoto).should("be.visible");
     cy.get(productPage.addPhoto).click();
-    cy.wait(2000);
-    cy.get(productPage.selectYourContent).should(
-      "have.text",
-      "Select Your Content"
-    );
+    //cy.wait(3000);
+    // cy.get(productPage.selectYourContent).should(
+    //   "have.text",
+    //   "Select Your Content"
+    // );
+    //cy.get(productPage.selectYourContent).should("be.visible");
     cy.get(productPage.addPhotoPopupCloseBtn).click();
   });
 
