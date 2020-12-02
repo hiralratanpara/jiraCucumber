@@ -1,0 +1,17 @@
+{
+  "contactUsPage": {
+    "contactUsButton": "li.footer-link:nth-child(11) > a:nth-child(1)",
+    "contactFormName": "#address\\.fullName",
+    "contactFormEmail": "#address\\.emailAddr",
+    "contactFormConfirmEmail": "#confirmEmailAddr",
+    "contactFormZipcode": "#address\\.zip",
+    "contactFormPhone": "#address\\.dayPhone",
+    "contactFormFeedbackAbout": "#subject",
+    "contactFormOrderNumber": "#orderNo",
+    "contactFormEnterMessage": "#message",
+    "contactFormSendMessage": "button.btn:nth-child(1)",
+    "contactFormSendErrorMessage": ".message",
+    "customerServiceNumbers": "#customer-service-numbers",
+    "popupwindow": ".stickyOverlayCloseButton"
+  }
+}
