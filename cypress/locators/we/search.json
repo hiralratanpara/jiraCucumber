@@ -1,0 +1,6 @@
+{
+  "searchBar": {
+    "search": "#search-field",
+    "search_button": "#btnSearch"
+  }
+}
