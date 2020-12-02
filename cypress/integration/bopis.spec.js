@@ -120,7 +120,7 @@ describe("Verify the bopis ", () => {
     cy.get(findAStorePopUp.bostsStoreSearchMsg).should("be.visible");
   });
 
-  it("close the store search popup", () => {
-    cy.get(findAStorePopUp.closeBtn).click();
-  });
+  // it("close the store search popup", () => {
+  //   cy.get(findAStorePopUp.closeBtn).click();
+  // });
 });

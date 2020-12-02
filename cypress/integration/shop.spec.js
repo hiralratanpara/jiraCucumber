@@ -94,62 +94,62 @@ describe("Test Shop Page ", () => {
     );
   });
 
-    it("should display the correct values in the sub-cat-aside", () => {
-      cy.get(category.FilterBySubcataside).should(
-        "have.text",
-        data.subCatAside.FilterBySubcataside
-      );
-      cy.get(category.AvailabilitySubcataside).should(
-        "have.text",
-        data.subCatAside.AvailabilitySubcataside
-      );
-      cy.get(category.MaterialSubcataside).should(
-        "have.text",
-        data.subCatAside.MaterialSubcataside
-      );
-      cy.get(category.LengthSubcataside).should(
-        "have.text",
-        data.subCatAside.LengthSubcataside
-      );
-      cy.get(category.ColorSubcataside).should(
-        "have.text",
-        data.subCatAside.ColorSubcataside
-      );
-      cy.get(category.SeatingCapacitySubcataside).should(
-        "have.text",
-        data.subCatAside.SeatingCapacitySubcataside
-      );
-     cy.get(category.SeatFirmnessSubcataside).should(
-       "have.text",
-       data.subCatAside.SeatFirmnessSubcataside
-     );
-     cy.get(category.FeaturesSubcataside).should(
-       "have.text",
-       data.subCatAside.FeaturesSubcataside
-     );
-     cy.get(category.PriceSubcataside).should(
-       "have.text",
-       data.subCatAside.PriceSubcataside
-     );
-    });
+  it("should display the correct values in the sub-cat-aside", () => {
+    cy.get(category.FilterBySubcataside).should(
+      "have.text",
+      data.subCatAside.FilterBySubcataside
+    );
+    cy.get(category.AvailabilitySubcataside).should(
+      "have.text",
+      data.subCatAside.AvailabilitySubcataside
+    );
+    cy.get(category.MaterialSubcataside).should(
+      "have.text",
+      data.subCatAside.MaterialSubcataside
+    );
+    cy.get(category.LengthSubcataside).should(
+      "have.text",
+      data.subCatAside.LengthSubcataside
+    );
+    cy.get(category.ColorSubcataside).should(
+      "have.text",
+      data.subCatAside.ColorSubcataside
+    );
+    cy.get(category.SeatingCapacitySubcataside).should(
+      "have.text",
+      data.subCatAside.SeatingCapacitySubcataside
+    );
+    cy.get(category.SeatFirmnessSubcataside).should(
+      "have.text",
+      data.subCatAside.SeatFirmnessSubcataside
+    );
+    cy.get(category.FeaturesSubcataside).should(
+      "have.text",
+      data.subCatAside.FeaturesSubcataside
+    );
+    cy.get(category.PriceSubcataside).should(
+      "have.text",
+      data.subCatAside.PriceSubcataside
+    );
+  });
 
-   it("should display 'SORT BY'", () => {
-     cy.get(category.SortBy).should("be.visible");
-    });
-   it("should select down arrow",() => {
-     cy.get(category.DownArrow).should("be.visible");
-    });
-   it("should select PriceLowToHIGH", () => {
-     cy.get(category.PriceLowToHIGH).should("be.visible");
-   });
-   it("should select Hamilton Leather Sofa (81)", () => {
-     cy.get(category.HamiltonLeatherSofa81).click ();
-   });
+  it("should display 'SORT BY'", () => {
+    cy.get(category.SortBy).should("be.visible");
+  });
+  it("should select down arrow", () => {
+    cy.get(category.DownArrow).should("be.visible");
+  });
+  it("should select PriceLowToHIGH", () => {
+    cy.get(category.PriceLowToHIGH).should("be.visible");
+  });
+  //  it("should select Hamilton Leather Sofa (81)", () => {
+  //    cy.get(category.HamiltonLeatherSofa81).click ();
+  //  });
 
-   it("should select Add to cart", () => {
-     cy.get(category.AddToCart).click ();
-     cy.wait(3000);
-   });
+  //  it("should select Add to cart", () => {
+  //    cy.get(category.AddToCart).click ();
+  //    cy.wait(3000);
+  //  });
 
   it("should display 'filter by' in left menu", () => {
     cy.get(category.visualNav).should("be.visible");
@@ -179,5 +179,4 @@ describe("Test Shop Page ", () => {
       ).should("be.visible");
     }
   });
-  });
-
+});
