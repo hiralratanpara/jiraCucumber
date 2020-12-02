@@ -5,7 +5,7 @@ import {
   searchPage,
 } from "../locators/we/pip.json";
 import { data } from "../fixtures/we/test-data.json";
-describe("WE verify the bopis ", () => {
+describe("Verify the bopis ", () => {
   Cypress.on("uncaught:exception", (err, runnable) => {
     return false;
   });
@@ -36,26 +36,22 @@ describe("WE verify the bopis ", () => {
         }
       });
   });
-  // it('Verify the BOSTS link in WS', () => {
-  //     //careerPage.carrerInfo();
-  //     //cy.viewport(1280, 800);
-  //     wsiSelectStorePage.bostsChangeStoreNotAvailable();
-  // });
 
   it("Should search SKU", () => {
     cy.get(searchPage.searchBox).type(data.bopis.skuNo2);
     cy.get(searchPage.searchBox).submit();
   });
 
-  it("Choose bopis and open up a store selector", () => {
-    //cy.get("#pickUpInStore0").click();
-    cy.get(productPage.bopis).click();
-    cy.wait(1000);
-    cy.get(findAStorePopUp.bopisFindAStorePopupTxt).should("be.visible");
+  it("Verify bopis change store link", () => {
+    if (
+      cy.contains(data.productPageData.notAvailableText).should("be.visible")
+    ) {
+      cy.get(productPage.bopis).click();
+    }
   });
+
   it("Search for a city within 25 miles were product is available for pickup", () => {
     cy.get(findAStorePopUp.zipCityStTxtBox).click();
-    cy.wait(1000);
     cy.get(findAStorePopUp.zipCityStTxtBox).type(
       data.findAStorePopUpData.cityName
     );
@@ -63,20 +59,14 @@ describe("WE verify the bopis ", () => {
       data.findAStorePopUpData.pressEnter,
       { release: true }
     );
-    cy.get(findAStorePopUp.bopisStoreSearchMsg).should(
-      "have.text",
-      data.findAStorePopUpData.bopisNotAvailable25Miles
-    );
+    cy.get(findAStorePopUp.bopisStoreSearchMsg).should("be.visible");
   });
 
   it("Verify the store selector search the store within 200 miles", () => {
-    cy.get(findAStorePopUp.selectMilesBox).focus();
+    //cy.get(findAStorePopUp.selectMilesBox).focus();
     cy.get(findAStorePopUp.selectMilesBox).select("200");
     cy.get(findAStorePopUp.bostsSearchBtn).click();
-    cy.get(findAStorePopUp.bostsStoreSearchMsg).should(
-      "have.text",
-      data.findAStorePopUpData.bopisStoreAvailable200Mile
-    );
+    cy.get(findAStorePopUp.bostsStoreSearchMsg).should("be.visible");
   });
 
   it("select a store from the options available for pick up", () => {
@@ -91,13 +81,6 @@ describe("WE verify the bopis ", () => {
       data.productPageData.seeStoreDetails
     );
   });
-
-  // it("bopis see store details link", () => {
-  //   cy.get(productPage.bopisStoreSelectedName).should(
-  //     "have.text",
-  //     data.findAStorePopUpData.storeLocation
-  //   );
-  // });
 
   it("clicking on see store details link", () => {
     cy.get(productPage.bopisStoreSelectedName).should("be.visible");
@@ -115,11 +98,13 @@ describe("WE verify the bopis ", () => {
   });
 
   it("verify the bopis change store link", () => {
-    //if (cy.get(productPage.bostsNotAvailableNearTxt).should("be.visible")) {
-    // cy.get(productPage.bosts).click();
-    // cy.wait(1000);
-    // cy.get(findAStorePopUp.bostsFindAStorePopupTxt).should("be.visible");
+    // if (cy.get(productPage.bostsNotAvailableNearTxt).is(":visible")) {
+    //   cy.get(productPage.bopis).click();
+    //   cy.wait(1000);
+    // } else {
+    //   cy.get(findAStorePopUp.bostsFindAStorePopupTxt).should("be.visible");
     cy.get(productPage.bopisChangeStoreLink).click();
+    // }
   });
 
   it("Search for a city within 25 miles were product is available for pickup", () => {
@@ -132,10 +117,7 @@ describe("WE verify the bopis ", () => {
       data.findAStorePopUpData.pressEnter,
       { release: true }
     );
-    cy.get(findAStorePopUp.bostsStoreSearchMsg).should(
-      "have.text",
-      data.findAStorePopUpData.bopisNotAvailable25Miles
-    );
+    cy.get(findAStorePopUp.bostsStoreSearchMsg).should("be.visible");
   });
 
   it("close the store search popup", () => {
