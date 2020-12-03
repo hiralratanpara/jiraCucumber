@@ -1,0 +1,19 @@
+{
+  "search": {
+    "accountButton": ".c-account-nav__link--no-line",
+    "emailTextField": "#login-email",
+    "passwordTextField": "#login-password",
+    "signInButton": "#btn-sign-in",
+    "fullName": "#fullName",
+    "email": "#email",
+    "confirmemail": "#confirmEmail",
+    "password": "#password",
+    "confirmPassword": "#confirmPassword",
+    "createAnAccount": "button.btn:nth-child(10)",
+    "accountCreationMessageSuccess": ".message-success",
+    "accountCreationErrorMessage": ".message"
+  },
+  "signInError": {
+    "errorMessage": ".message"
+  }
+}
