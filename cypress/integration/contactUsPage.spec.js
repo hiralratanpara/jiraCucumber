@@ -35,15 +35,7 @@ describe('Contact Us feature', () => {
 
   })
 
-  it('Contact Us form able to type', () => {
 
-
-    cy.get(contactUsPage.popupwindow).trigger("mouseover").click();
-    cy.get(contactUsPage.contactFormName).type('name');
-    cy.get(contactUsPage.contactFormZipcode).type('12345');
-
-
-  });
   it('Customer Service numbers', () => {
 
 
