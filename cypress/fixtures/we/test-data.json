@@ -47,17 +47,17 @@
       "skuNo2": "2527697"
     },
 
-   "subCatAside": {
-       "FilterBySubcataside": "Filter By:",
-       "AvailabilitySubcataside": "\n            Availability\n          ",
-       "MaterialSubcataside": "Material ",
-       "LengthSubcataside": "Length ",
-       "ColorSubcataside": "Color",
-       "SeatingCapacitySubcataside": "Seating Capacity ",
-       "SeatFirmnessSubcataside": "Seat Firmness ",
-       "FeaturesSubcataside": "Features ",
-       "PriceSubcataside": "Price "
-   },
+    "subCatAside": {
+      "FilterBySubcataside": "Filter By:",
+      "AvailabilitySubcataside": "\n            Availability\n          ",
+      "MaterialSubcataside": "Material ",
+      "LengthSubcataside": "Length ",
+      "ColorSubcataside": "Color",
+      "SeatingCapacitySubcataside": "Seating Capacity ",
+      "SeatFirmnessSubcataside": "Seat Firmness ",
+      "FeaturesSubcataside": "Features ",
+      "PriceSubcataside": "Price "
+    },
     "myStore": {
       "myStoreTxt": " My Store ",
       "zip": "03456",
