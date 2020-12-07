@@ -49,6 +49,20 @@ Here is an example to run Westelm in regression on chrome browser
 - `npm run cypress --env brand=we,region=regression,username=xxxx,password=xxxx --browser=chrome`
   - Replace `xxxx` with actual values.
 
+### Running a specific test
+
+Cypress provides the option to run a single test in headless mode. Below command shows how to run a test a specific test.
+
+- You will need to provide `--spec` followed by the test case path
+  - `npm run cypress:open -- --spec "cypress/integration/shop.spec.js"`
+
+### Running tests on different devices
+
+To run the tests on different devices, you can configure the viewport through the command line.
+
+- `viewportWidth` and `viewportHeight` parameters of the device need to be passed to the config flag. Below is an example to run tests in iphone x in interactive mode.
+  - `npm run cypress:open -- --config viewportWidth=375,viewportHeight=812`
+
 ### Putting it All Together
 
 We can mix together any of the examples above to create the perfect recipe, like so:
