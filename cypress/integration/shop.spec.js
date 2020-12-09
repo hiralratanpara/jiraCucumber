@@ -56,18 +56,6 @@ describe("Test Shop Page ", () => {
     cy.get(category.superCat).click();
     cy.get(category.leftMenu).click();
 
-    // cy.get("body")
-    //   .find(
-    //     "#join-email-campaign > .shader > .modal-scroll > .modal_component > .btnClose"
-    //   )
-    //   .its("length")
-    //   .then((res) => {
-    //     if (res > 0) {
-    //       cy.get(
-    //         "#join-email-campaign > .shader > .modal-scroll > .modal_component > .btnClose"
-    //       ).click();
-    //     }
-    //   });
     cy.wait(5000);
     cy.get(category.visualNav).should("be.visible");
   });
@@ -133,55 +121,41 @@ describe("Test Shop Page ", () => {
     );
   });
 
-   it("should display 'SORT BY'", () => {
-     cy.get(category.SortBy).should("be.visible");
-    });
-   it("should select down arrow",() => {
-     cy.get(category.DownArrow).should("be.visible");
-    });
-   //it("should select PriceLowToHIGH", () => {
-   //cy.get('#sortBy > label').click();
-   //cy.get('#sortBy > label > select')
-     //.select('         Price (Low to High)       ').should('have.value', 'lowestPrice asc',"{force: true}");
-    //cy.get('#sortBy > label > select').select("         Price (Low to High)       ","{force: true}");
-     //cy.get(category.PriceLowToHIGH).should("be.visible");
-   //});
-   //it("should select Hamilton Leather Sofa 81 inch", () => {
-     //cy.get(category.HamiltonLeatherSofa81).click ();
-   //});
-
-   //it("should select Add to cart", () => {
-     //cy.get(category.AddToCart).click ();
-     //cy.wait(3000);
-   //});
+  it("should display 'SORT BY'", () => {
+    if (Cypress.env("viewportWidth")) {
+      cy.get(category.SortBy).should("be.visible");
+    }
+  });
+  it("should select down arrow", () => {
+    if (Cypress.env("viewportWidth")) {
+      cy.get(category.DownArrow).should("be.visible");
+    }
+  });
 
   it("should display 'filter by' in left menu", () => {
     cy.get(category.visualNav).should("be.visible");
   });
 
   it("should display the product related to material selected valvet", () => {
-    // cy.get(category.superCat).click();
-    // cy.get(category.leftMenu).click({ force: true });
+    if (Cypress.env("viewportWidth")) {
+      cy.get("body")
+        .find(
+          "#join-email-campaign > .shader > .modal-scroll > .modal_component > .btnClose"
+        )
+        .its("length")
+        .then((res) => {
+          if (res > 0) {
+            cy.get(
+              "#join-email-campaign > .shader > .modal-scroll > .modal_component > .btnClose"
+            ).click();
+          }
+        });
 
-    cy.get("body")
-      .find(
-        "#join-email-campaign > .shader > .modal-scroll > .modal_component > .btnClose"
-      )
-      .its("length")
-      .then((res) => {
-        if (res > 0) {
-          cy.get(
-            "#join-email-campaign > .shader > .modal-scroll > .modal_component > .btnClose"
-          ).click();
-        }
-      });
-
-    if (cy.get(category.faucetValvetCheckBox).click()) {
-      //cy.get(category.firstSofaShown).should("be.visible");
-      cy.get(
-        '[href="/products/harmony-sofa-h2479/?pkey=cmaterial-m-material-ff0011-1"] > .product-image'
-      ).should("be.visible");
+      if (cy.get(category.faucetValvetCheckBox).click()) {
+        cy.get(
+          '[href="/products/harmony-sofa-h2479/?pkey=cmaterial-m-material-ff0011-1"] > .product-image'
+        ).should("be.visible");
+      }
     }
   });
-  });
-
+});
