@@ -9,11 +9,16 @@ describe("Verify the bopis ", () => {
   Cypress.on("uncaught:exception", (err, runnable) => {
     return false;
   });
+
+  var region = Cypress.env("region");
+  var urls = Cypress.env(region);
+  var brand = Cypress.env("brand");
+  var url = urls[brand];
   before(() => {
-    var region = Cypress.env("region");
-    var urls = Cypress.env(region);
-    var brand = Cypress.env("brand");
-    var url = urls[brand];
+    // var region = Cypress.env("region");
+    // var urls = Cypress.env(region);
+    // var brand = Cypress.env("brand");
+    // var url = urls[brand];
 
     if (region.toUpperCase() === "PROD") {
       cy.visit(url);
@@ -26,7 +31,7 @@ describe("Verify the bopis ", () => {
       });
     }
 
-    cy.wait(5000);
+    /*  cy.wait(5000);
     cy.get("body")
       .find(".stickyOverlayCloseButton")
       .its("length")
@@ -34,12 +39,52 @@ describe("Verify the bopis ", () => {
         if (res > 0) {
           cy.get(".stickyOverlayCloseButton").click();
         }
-      });
+      }); */
+
+    cy.wait(5000);
+    // var region = Cypress.env("region");
+    // var urls = Cypress.env(region);
+    // var brand = Cypress.env("brand");
+    // var url = urls[brand];
+    if (url === "https://westelm.com") {
+      cy.get("body")
+        .find(".stickyOverlayCloseButton")
+        .its("length")
+        .then((res) => {
+          if (res > 0) {
+            cy.get(".stickyOverlayCloseButton").click();
+          }
+        });
+    } else {
+      cy.get("body")
+        .find(".mobile-email-close")
+        .its("length")
+        .then((res) => {
+          if (res > 0) {
+            cy.get(".mobile-email-close").click();
+          }
+        });
+    }
   });
 
-  it("Should search SKU", () => {
+  /* it("Should search SKU", () => {
     cy.get(searchPage.searchBox).type(data.bopis.skuNo2);
     cy.get(searchPage.searchBox).submit();
+  }); */
+
+  it("Should search SKU", () => {
+    // var region = Cypress.env("region");
+    // var urls = Cypress.env(region);
+    // var brand = Cypress.env("brand");
+    // var url = urls[brand];
+    if (url === "https://westelm.com") {
+      //if (viewportWidth === "375" && viewportHeight === "812") {
+      cy.get(searchPage.searchBox).type(data.bopis.skuNo2);
+      cy.get(searchPage.searchBox).submit();
+    } else {
+      cy.get("#search-field").type(data.bopis.skuNo2);
+      cy.get(".search-button").click();
+    }
   });
 
   it("Verify bopis change store link", () => {
