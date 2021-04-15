@@ -1,1 +1,4 @@
-{}
+{
+  "screenshotOnRunFailure": "true",
+  "screenshotsFolder": "cypress/screenshots"
+}
